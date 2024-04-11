@@ -13,6 +13,7 @@ namespace ssd {
             keyValuePairs["type"] = "quit";
             networkHandler.sendResponse(keyValuePairs);
         }
+        std::cout << "[ClientHandler::~ClientHandler] game over" << std::endl;
     }
 
     ClientHandler::ClientHandler(ClientHandler && other) noexcept : clientId(other.clientId), networkHandler(std::move(other.networkHandler)), isFinish(other.isFinish) {}
@@ -36,13 +37,16 @@ namespace ssd {
                 break;
             }
             bool questionAnswer = game.checkQuestion(question, questionValue);
-
-            networkHandler.sendResponse(createResponse(game, question, questionAnswer));
+            auto response = createResponse(game, question, questionAnswer);
+            networkHandler.sendResponse(response);
 
             if (question == Questions::equal && questionAnswer || game.getLeftAttempts() == 0) {
                 isFinish = true;
             }
         }
+
+        std::cout << "[ClientHandler::run] game over" << std::endl;
+
         mtx.lock();
         finishedClients.insert(clientId);
         mtx.unlock();
@@ -77,9 +81,9 @@ namespace ssd {
         auto numberBorders = game.getNumberBorders();
 
         keyValuePairs["type"] = "generated_number";
-        keyValuePairs["left_border"] = numberBorders.first;
-        keyValuePairs["right_border"] = numberBorders.second;
-        keyValuePairs["left_attempts"] = game.getLeftAttempts();
+        keyValuePairs["left_border"] = std::to_string(numberBorders.first);
+        keyValuePairs["right_border"] = std::to_string(numberBorders.second);
+        keyValuePairs["left_attempts"] = std::to_string(game.getLeftAttempts());
 
         return keyValuePairs;
     }
@@ -104,7 +108,7 @@ namespace ssd {
             keyValuePairs["status"] = "wrong";
         }
 
-        keyValuePairs["left_attempts"] = game.getLeftAttempts();
+        keyValuePairs["left_attempts"] = std::to_string(game.getLeftAttempts());
         return keyValuePairs;
     }
 

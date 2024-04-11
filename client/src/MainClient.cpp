@@ -67,7 +67,8 @@ namespace ssd {
             gameResult = 1;
         } else if (std::stoi(response.find("left_attempts")->second) == 0) {
             gameResult = -1;
-        } else if (response_status == "correct") {
+        }
+        if (response_status == "correct") {
             questionAnswer = true;
         }
     }

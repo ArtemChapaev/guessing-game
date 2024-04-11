@@ -10,11 +10,10 @@ namespace ssd {
             port(port),
             server_socket(socket(AF_INET, SOCK_STREAM, 0)) {
         if (server_socket < 0) {
-            throw std::runtime_error("[Client::Client] socket(2) call error");
+            throw std::runtime_error("[Client::Client] socket call error");
         }
 
         buffer = new char[BUFFER_SIZE];
-        std::cout << "[ClientNetworkHandler::ClientNetworkHandler] Ready" << std::endl;
     }
 
     ClientNetworkHandler::~ClientNetworkHandler() {
@@ -31,14 +30,14 @@ namespace ssd {
 
         hostent *host_name = gethostbyname(host.c_str());
         if (host_name == nullptr) {
-            throw std::runtime_error("[ClientNetworkHandler::connectToServer] gethostbyname(3) call error");
+            throw std::runtime_error("[ClientNetworkHandler::connectToServer] gethostbyname call error");
         }
         memcpy(&server_address.sin_addr.s_addr, host_name->h_addr, host_name->h_length);
 
         server_address.sin_port = htons(port);
 
         if (connect(server_socket, reinterpret_cast<const sockaddr *>(&server_address), sizeof(server_address)) != 0) {
-            throw std::runtime_error("[ClientNetworkHandler::connectToServer] connect(2) call error");
+            throw std::runtime_error("[ClientNetworkHandler::connectToServer] connect call error");
         }
     }
 
@@ -49,7 +48,6 @@ namespace ssd {
         if (data_size < 0) {
             throw std::runtime_error("[ClientNetworkHandler::sendRequest] send call error");
         }
-        std::cout << "[ClientNetworkHandler::sendRequest] Sent " << data_size << " b" << std::endl;
     }
 
     std::unordered_map<std::string, std::string> ClientNetworkHandler::receiveResponse() {
@@ -58,16 +56,12 @@ namespace ssd {
 
         bool isFinish = false;
         while (!isFinish) {
-            // ssize_t data_size = recv(server_socket, buffer, BUFFER_SIZE, 0);
-            char buffer[1024] = {0};
-            ssize_t data_size = recv(server_socket, buffer, sizeof(buffer) - 1, 0);
+            ssize_t data_size = recv(server_socket, buffer, BUFFER_SIZE, 0);
 
             if (data_size < 0) {
                 throw std::runtime_error("[ClientNetworkHandler::receiveResponse] recv call error");
             }
-            if (data_size) {
-                std::cout << "[ClientNetworkHandler::receiveResponse] Got " << data_size << " b" << std::endl;
-            }
+            std::cout << "[ClientNetworkHandler::receiveResponse] Got " << data_size << " b" << std::endl;
 
             receivedMessage += std::string(buffer, data_size);
             try {

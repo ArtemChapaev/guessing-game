@@ -1,12 +1,13 @@
 #include "ServerNetworkHandler.hpp"
 #include "parser.hpp"
 
-#include <chrono>
 #include <thread>
 
 namespace ssd {
 
-    ServerNetworkHandler::ServerNetworkHandler(int socket) : clientSocket(socket) {}
+    ServerNetworkHandler::ServerNetworkHandler(int socket) : clientSocket(socket) {
+        buffer = new char[BUFFER_SIZE];
+    }
 
     ServerNetworkHandler::ServerNetworkHandler(ServerNetworkHandler &&other) noexcept {
         clientSocket = other.clientSocket;
@@ -16,7 +17,7 @@ namespace ssd {
         other.clientSocket = -1;
     }
 
-    ServerNetworkHandler& ServerNetworkHandler::operator=(ServerNetworkHandler &&other) noexcept {
+    ServerNetworkHandler &ServerNetworkHandler::operator=(ServerNetworkHandler &&other) noexcept {
         if (this != &other) {
 
             clientSocket = other.clientSocket;
@@ -57,17 +58,13 @@ namespace ssd {
 
         bool isFinish = false;
         while (!isFinish) {
-            // ssize_t data_size = recv(clientSocket, buffer, BUFFER_SIZE, 0);
-            char buffer[1024] = {0};
-            ssize_t data_size = recv(clientSocket, buffer, sizeof(buffer) - 1, 0);
+            ssize_t data_size = recv(clientSocket, buffer, BUFFER_SIZE, 0);
             if (data_size < 0) {
                 throw std::runtime_error("[ServerNetworkHandler::receiveRequest] recv call error");
             }
-            std::this_thread::sleep_for(std::chrono::milliseconds (333));
+            // std::this_thread::sleep_for(std::chrono::milliseconds(333));
 
-            if (data_size) {
-                std::cout << "[ServerNetworkHandler::receiveRequest] Got " << data_size << " b" << std::endl;
-            }
+            std::cout << "[ServerNetworkHandler::receiveRequest] Got " << data_size << " b" << std::endl;
 
             receivedMessage += std::string(buffer, data_size);
             try {

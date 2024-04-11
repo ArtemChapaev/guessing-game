@@ -6,8 +6,8 @@
 int main(int argc, char **argv) {
     int opt;
     std::string host = "localhost";
-    short unsigned port = 64028u;
-    std::string name = "name";
+    short unsigned port = 1024u;
+    std::string name = "Тамара Михайловна";
 
     while ((opt = getopt(argc, argv, "h:p:n")) != -1) {
         switch (opt) {

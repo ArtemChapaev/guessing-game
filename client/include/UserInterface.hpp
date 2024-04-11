@@ -8,11 +8,11 @@
 
 namespace ssd {
 
-#define INIT_NUMBER_TEMPLATE "Number X was generated between"
+#define INIT_NUMBER_TEMPLATE "Number X was generated between "
 
-#define WIN_STRING "Win! Congratulations!"
+#define WIN_STRING "You win! Congratulations!"
 #define LOSS_STRING "You loss.."
-#define LEFT_ATTEMPTS_STRING "Lest attempts "
+#define LEFT_ATTEMPTS_STRING "Left attempts "
 
 
     class UserInterface {
@@ -38,7 +38,9 @@ namespace ssd {
         const std::vector<const std::string> wrongAnswers = {NON_LESS_TEMPLATE, NON_BIGGER_TEMPLATE,
                                                              NON_EQUAL_TEMPLATE};
 
-        static void setCursor(unsigned, unsigned);
+        int processUserInput(char) const;
+
+        static void setCursor(unsigned, unsigned) ;
     };
 
 } // ssd namespace

@@ -3,15 +3,16 @@
 
 #include <unistd.h>
 #include <string>
+#include <ctime>
 
 #include "NumberRange.hpp"
 
 struct ProgramArguments {
     std::string host = "localhost";
-    short unsigned port = 64028u;
-    int seed = 33;
+    short unsigned port = 1024u;
+    long seed = time(nullptr);
     int attemptsCount = 5;
-    ssd::NumberRange range;
+    ssd::NumberRange range = {1, 10, 50, 55};
 };
 
 
@@ -30,7 +31,7 @@ ProgramArguments parseArguments(int argc, char** argv) {
                 args.port = static_cast<unsigned short>(std::atoi(optarg));
                 break;
             case 's':
-                args.seed = std::atoi(optarg);
+                args.seed = std::atol(optarg);
                 break;
             case 'n':
                 args.attemptsCount = std::atoi(optarg);
