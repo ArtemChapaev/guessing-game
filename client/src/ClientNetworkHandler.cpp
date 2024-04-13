@@ -23,7 +23,8 @@ namespace ssd {
     }
 
     void ClientNetworkHandler::connectToServer() {
-        sockaddr_in server_address;
+        // prepare stage
+        sockaddr_in server_address{};
         memset(reinterpret_cast<char *>(&server_address), '\0', sizeof(server_address));
 
         server_address.sin_family = AF_INET;
@@ -36,6 +37,7 @@ namespace ssd {
 
         server_address.sin_port = htons(port);
 
+        // connect and check error
         if (connect(server_socket, reinterpret_cast<const sockaddr *>(&server_address), sizeof(server_address)) != 0) {
             throw std::runtime_error("[ClientNetworkHandler::connectToServer] connect call error");
         }
@@ -58,10 +60,10 @@ namespace ssd {
         while (!isFinish) {
             ssize_t data_size = recv(server_socket, buffer, BUFFER_SIZE, 0);
 
-            if (data_size < 0) {
+            if (data_size <= 0) {
+                // if server was disconnected, we cannot get response
                 throw std::runtime_error("[ClientNetworkHandler::receiveResponse] recv call error");
             }
-            std::cout << "[ClientNetworkHandler::receiveResponse] Got " << data_size << " b" << std::endl;
 
             receivedMessage += std::string(buffer, data_size);
             try {

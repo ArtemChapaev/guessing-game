@@ -1,7 +1,6 @@
 #ifndef CLIENT_NETWORK_HANDLER_HPP
 #define CLIENT_NETWORK_HANDLER_HPP
 
-#include <unordered_map>
 #include <iostream>
 
 #include <sys/socket.h>

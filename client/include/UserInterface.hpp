@@ -12,35 +12,37 @@ namespace ssd {
 
 #define WIN_STRING "You win! Congratulations!"
 #define LOSS_STRING "You loss.."
-#define LEFT_ATTEMPTS_STRING "Left attempts "
+#define SERVER_ERROR_STRING "Server was disconnected"
 
+#define LEFT_ATTEMPTS_STRING "Left attempts "
 
     class UserInterface {
     public:
-        void prepareDisplay() const;
+        static std::pair<Questions, int> getUserInput();
 
-        void displayMessage(Questions, bool, int, int) const;
+        static void prepareDisplay();
 
-        void displayMessage(int, int, int) const;
+        static void displayMessage(Questions, bool, int, int);
 
-        void displayLeftAttempts(int) const;
+        static void displayMessage(int, int, int);
 
-        void displayWin() const;
+        static void displayLeftAttempts(int);
 
-        void displayLoss() const;
+        static void displayWin();
 
-        std::pair<Questions, int> getUserInput() const;
+        static void displayLoss();
+
+        static void displayServerError();
 
     private:
-        const std::vector<const std::string> questionMarks = {"<", ">", "="};
-        const std::vector<const std::string> questionDescriptions = {LESS_QUESTION, BIGGER_QUESTION, EQUAL_QUESTION};
-        const std::vector<const std::string> correctAnswers = {LESS_TEMPLATE, BIGGER_TEMPLATE, EQUAL_TEMPLATE};
-        const std::vector<const std::string> wrongAnswers = {NON_LESS_TEMPLATE, NON_BIGGER_TEMPLATE,
-                                                             NON_EQUAL_TEMPLATE};
+        static const std::vector<const std::string> questionMarks;
+        static const std::vector<const std::string> questionDescriptions;
+        static const std::vector<const std::string> correctAnswers;
+        static const std::vector<const std::string> wrongAnswers;
 
-        int processUserInput(char) const;
+        static int processUserInput(char);
 
-        static void setCursor(unsigned, unsigned) ;
+        static void setCursor(unsigned, unsigned);
     };
 
 } // ssd namespace

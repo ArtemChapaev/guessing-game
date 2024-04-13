@@ -18,6 +18,7 @@ project(server)
 add_executable(server
         parser.cpp
         server/src/ServerNetworkHandler.cpp
+        server/src/NumberRange.cpp
         server/src/Number.cpp
         server/src/GameManager.cpp
         server/src/ClientHandler.cpp

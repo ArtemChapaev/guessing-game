@@ -1,4 +1,3 @@
-#include <iostream>
 #include <unistd.h>
 
 #include "MainClient.hpp"
@@ -9,13 +8,17 @@ int main(int argc, char **argv) {
     short unsigned port = 1024u;
     std::string name = "Тамара Михайловна";
 
-    while ((opt = getopt(argc, argv, "h:p:n")) != -1) {
+    while ((opt = getopt(argc, argv, "h:p:n:")) != -1) {
         switch (opt) {
             case 'h':
                 host = optarg;
                 break;
             case 'p':
-                port = static_cast<unsigned short>(std::atoi(optarg));
+                try {
+                    port = static_cast<unsigned short>(std::stoi(optarg));
+                } catch (const std::invalid_argument&) {
+                    throw std::invalid_argument("[::main] Port can be unsigned short");
+                }
                 break;
             case 'n':
                 name = optarg;

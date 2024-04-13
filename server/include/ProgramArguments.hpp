@@ -12,46 +12,81 @@ struct ProgramArguments {
     short unsigned port = 1024u;
     long seed = time(nullptr);
     int attemptsCount = 5;
-    ssd::NumberRange range = {1, 10, 50, 55};
+    ssd::NumberRange range = {1, 10, 25, 30};
 };
 
 
-ProgramArguments parseArguments(int argc, char** argv) {
+ProgramArguments parseArguments(int argc, char **argv) {
     int opt;
     ProgramArguments args;
 
-    // add checks
-
-    while ((opt = getopt(argc, argv, "a:p:s:n:l:L:h:H")) != -1) {
+    int ll = args.range.getLowLeftBorder();
+    int hl = args.range.getHighLeftBorder();
+    int lr = args.range.getLowRightBorder();
+    int hr = args.range.getHighRightBorder();
+    while ((opt = getopt(argc, argv, "h:p:s:n:l:L:r:R:")) != -1) {
         switch (opt) {
-            case 'a':
+            case 'h':
                 args.host = optarg;
                 break;
             case 'p':
-                args.port = static_cast<unsigned short>(std::atoi(optarg));
+                try {
+                    args.port = static_cast<unsigned short>(std::stoi(optarg));
+                } catch (const std::invalid_argument &) {
+                    throw std::invalid_argument("[::parseArguments] Port can be unsigned short");
+                }
                 break;
             case 's':
-                args.seed = std::atol(optarg);
+                try {
+                    args.seed = std::stol(optarg);
+                } catch (const std::invalid_argument &) {
+                    throw std::invalid_argument("[::parseArguments] Seed can be long");
+                }
                 break;
             case 'n':
-                args.attemptsCount = std::atoi(optarg);
+                try {
+                    args.attemptsCount = std::stoi(optarg);
+                } catch (const std::invalid_argument &) {
+                    throw std::invalid_argument("[::parseArguments] Attempts count can be unsigned int");
+                }
+                if (args.attemptsCount < 0) {
+                    throw std::invalid_argument("[::parseArguments] Attempts count can be bigger than 0");
+                }
                 break;
             case 'l':
-                args.range.lowLeftBorder = std::atoi(optarg);
+                try {
+                    ll = std::stoi(optarg);
+                } catch (const std::invalid_argument &) {
+                    throw std::invalid_argument("[::parseArguments] Low left border count can be int");
+                }
                 break;
             case 'L':
-                args.range.highLeftBorder = std::atoi(optarg);
+                try {
+                    hl = std::stoi(optarg);
+                } catch (const std::invalid_argument &) {
+                    throw std::invalid_argument("[::parseArguments] High left border count can be int");
+                }
                 break;
-            case 'h':
-                args.range.lowRightBorder = std::atoi(optarg);
+            case 'r':
+                try {
+                    lr = std::stoi(optarg);
+                } catch (const std::invalid_argument &) {
+                    throw std::invalid_argument("[::parseArguments] Low right border count can be int");
+                }
                 break;
-            case 'H':
-                args.range.highRightBorder = std::atoi(optarg);
+            case 'R':
+                try {
+                    hr = std::stoi(optarg);
+                } catch (const std::invalid_argument &) {
+                    throw std::invalid_argument("[::parseArguments] High right border count can be int");
+                }
                 break;
             default:
                 break;
         }
+
     }
+    args.range.setBorders(ll, hl, lr, hr);
 
     return args;
 }

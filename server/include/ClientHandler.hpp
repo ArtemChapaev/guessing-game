@@ -12,40 +12,28 @@
 #include "GameManager.hpp"
 #include "NumberRange.hpp"
 
-extern std::unordered_set<int> finishedClients;
-extern std::mutex mtx;
-
 namespace ssd {
 
 #define BUFFER_SIZE 96
 
     class ClientHandler {
     public:
-        ClientHandler(int, int);
-
-        ~ClientHandler();
+        ClientHandler(int);
 
         ClientHandler(const ClientHandler &) = delete;
 
         ClientHandler& operator=(const ClientHandler &) = delete;
 
-        ClientHandler(ClientHandler &&) noexcept;
-
-        ClientHandler& operator=(ClientHandler &&) = delete;
-
         void run(const NumberRange &, int);
+    private:
+        ServerNetworkHandler networkHandler;
+
+        void processRequest(const std::unordered_map<std::string, std::string> &, Questions &, int &);
 
         std::unordered_map<std::string, std::string> createInitialResponse(const GameManager &);
 
         std::unordered_map<std::string, std::string> createResponse(const GameManager &, Questions, bool);
 
-        void processRequest(const std::unordered_map<std::string, std::string> &, Questions &, int &);
-
-        const int clientId;
-
-    private:
-        ServerNetworkHandler networkHandler;
-        bool isFinish;
     };
 
 } // ssd namespace

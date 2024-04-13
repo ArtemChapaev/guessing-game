@@ -1,8 +1,8 @@
 #ifndef MAIN_SERVER_HPP
 #define MAIN_SERVER_HPP
 
-#include <list>
 #include <thread>
+#include <iostream>
 
 #include <netdb.h>
 #include <arpa/inet.h>
@@ -10,13 +10,9 @@
 #include "NumberRange.hpp"
 #include "ClientHandler.hpp"
 
-extern std::unordered_set<int> finishedClients;
-extern std::mutex mtx;
-
 namespace ssd {
 
 #define CONNECTION_QUEUE_SIZE 4000
-#define CLIENTS_CHECK_FREQ 5
 
     class MainServer {
     public:
@@ -28,12 +24,6 @@ namespace ssd {
         const std::string &host;
         const unsigned short port;
         int server_socket;
-
-        std::list<ClientHandler> clients;
-
-        void printClientInfo(sockaddr &);
-
-        void checkClients();
     };
 
 } // ssd namespace

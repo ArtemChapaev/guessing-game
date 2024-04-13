@@ -1,7 +1,4 @@
 #include "ServerNetworkHandler.hpp"
-#include "parser.hpp"
-
-#include <thread>
 
 namespace ssd {
 
@@ -31,9 +28,7 @@ namespace ssd {
     }
 
     ServerNetworkHandler::~ServerNetworkHandler() {
-        if (buffer != nullptr) {
-            delete[] buffer;
-        }
+        delete[] buffer;
 
         if (clientSocket != -1) {
             shutdown(clientSocket, SHUT_RDWR);
@@ -49,7 +44,6 @@ namespace ssd {
         if (data_size < 0) {
             throw std::runtime_error("[ServerNetworkHandler::sendResponse] send call error");
         }
-        std::cout << "[ServerNetworkHandler::sendResponse] Sent " << data_size << " b" << std::endl;
     }
 
     std::unordered_map<std::string, std::string> ServerNetworkHandler::receiveRequest() {
@@ -59,13 +53,9 @@ namespace ssd {
         bool isFinish = false;
         while (!isFinish) {
             ssize_t data_size = recv(clientSocket, buffer, BUFFER_SIZE, 0);
-            if (data_size < 0) {
+            if (data_size <= 0) {
                 throw std::runtime_error("[ServerNetworkHandler::receiveRequest] recv call error");
             }
-            // std::this_thread::sleep_for(std::chrono::milliseconds(333));
-
-            std::cout << "[ServerNetworkHandler::receiveRequest] Got " << data_size << " b" << std::endl;
-
             receivedMessage += std::string(buffer, data_size);
             try {
                 result = str2map(receivedMessage);

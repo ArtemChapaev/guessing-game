@@ -1,55 +1,52 @@
 #include "ClientHandler.hpp"
 
-std::unordered_set<int> finishedClients;
-std::mutex mtx;
-
 namespace ssd {
 
-    ClientHandler::ClientHandler(int socket, int id) : clientId(id), networkHandler(socket), isFinish(false) {}
+    ClientHandler::ClientHandler(
+            int socket
+    ) : networkHandler(socket) {}
 
-    ClientHandler::~ClientHandler() {
-        if (!isFinish) {
-            std::unordered_map<std::string, std::string> keyValuePairs;
-            keyValuePairs["type"] = "quit";
-            networkHandler.sendResponse(keyValuePairs);
-        }
-        std::cout << "[ClientHandler::~ClientHandler] game over" << std::endl;
-    }
-
-    ClientHandler::ClientHandler(ClientHandler && other) noexcept : clientId(other.clientId), networkHandler(std::move(other.networkHandler)), isFinish(other.isFinish) {}
-
-    void ClientHandler::run(const NumberRange& range, int attemptsCount) {
-        GameManager game(range, attemptsCount);
-
+    void ClientHandler::run(
+            const NumberRange &range,
+            int initialAttemptsCount
+    ) {
         std::unordered_map<std::string, std::string> request = networkHandler.receiveRequest();
         // type == "start". ignore user's name
-        std::cout << "[ClientHandler::run] Clients name: " << request["name"] << std::endl;
+        std::cout << "[ClientHandler::run] Game is started, client's name: " << request["name"] << std::endl;
+
+        GameManager game(range, initialAttemptsCount);
+        // send data about generated number to user
         networkHandler.sendResponse(createInitialResponse(game));
 
         Questions question;
         int questionValue;
 
+        bool isFinish = false;
+        // while game is not finished read user's question -> process it -> send aswer
         while (!isFinish) {
-            request = networkHandler.receiveRequest();
-
-            processRequest(request, question, questionValue);
-            if (isFinish) {
+            try {
+                request = networkHandler.receiveRequest();
+            } catch (const std::runtime_error &e) {
+                // if client went to sleep, we left loop and delete thread
                 break;
             }
-            bool questionAnswer = game.checkQuestion(question, questionValue);
-            auto response = createResponse(game, question, questionAnswer);
-            networkHandler.sendResponse(response);
+            processRequest(request, question, questionValue);
 
+            bool questionAnswer = game.checkQuestion(question, questionValue);
+            networkHandler.sendResponse(
+                    createResponse(
+                            game,
+                            question,
+                            questionAnswer
+                    )
+            );
+
+            // conditions of game's end
             if (question == Questions::equal && questionAnswer || game.getLeftAttempts() == 0) {
                 isFinish = true;
             }
         }
-
-        std::cout << "[ClientHandler::run] game over" << std::endl;
-
-        mtx.lock();
-        finishedClients.insert(clientId);
-        mtx.unlock();
+        std::cout << "[ClientHandler::run] Game is finished, client's name: " << request["name"] << std::endl;
     }
 
     void ClientHandler::processRequest(
@@ -58,12 +55,6 @@ namespace ssd {
             int &questionValue
     ) {
         auto requestType = request.find("type")->second;
-
-        // if user finish session
-        if (requestType == "quit") {
-            isFinish = true;
-            return;
-        }
 
         if (requestType == "guess") {
             question = Questions::equal;
@@ -76,10 +67,13 @@ namespace ssd {
         questionValue = std::stoi(request.find("number")->second);
     }
 
-    std::unordered_map<std::string, std::string> ClientHandler::createInitialResponse(const GameManager &game) {
+    std::unordered_map<std::string, std::string> ClientHandler::createInitialResponse(
+            const GameManager &game
+    ) {
         std::unordered_map<std::string, std::string> keyValuePairs;
         auto numberBorders = game.getNumberBorders();
 
+        // add info about generated number
         keyValuePairs["type"] = "generated_number";
         keyValuePairs["left_border"] = std::to_string(numberBorders.first);
         keyValuePairs["right_border"] = std::to_string(numberBorders.second);
@@ -94,6 +88,7 @@ namespace ssd {
             bool questionAnswer
     ) {
         std::unordered_map<std::string, std::string> keyValuePairs;
+        // define type
         if (question == Questions::equal) {
             keyValuePairs["type"] = "guess_result";
         } else if (question == Questions::less) {
@@ -102,6 +97,7 @@ namespace ssd {
             keyValuePairs["type"] = "bigger_question_result";
         }
 
+        // define status
         if (questionAnswer) {
             keyValuePairs["status"] = "correct";
         } else {

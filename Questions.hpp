@@ -3,17 +3,17 @@
 
 namespace ssd {
 
-#define LESS_QUESTION "Is number X less than Y?"
-#define BIGGER_QUESTION "Is number X greater than Y?"
-#define EQUAL_QUESTION "Is number X equal to Y?"
+#define LESS_QUESTION "Is X less than Y?"
+#define BIGGER_QUESTION "Is X greater than Y?"
+#define EQUAL_QUESTION "Is X equal to Y?"
 
-#define LESS_TEMPLATE "Number X is less than "
-#define BIGGER_TEMPLATE "Number X is greater than "
-#define EQUAL_TEMPLATE "Number X is equal to "
+#define LESS_TEMPLATE "X is less than "
+#define BIGGER_TEMPLATE "X is greater than "
+#define EQUAL_TEMPLATE "X is equal to "
 
-#define NON_LESS_TEMPLATE "Number X is not less than "
-#define NON_BIGGER_TEMPLATE "Number X is not greater than "
-#define NON_EQUAL_TEMPLATE "Number X is not equal to "
+#define NON_LESS_TEMPLATE "X is NOT less than "
+#define NON_BIGGER_TEMPLATE "X is NOT greater than "
+#define NON_EQUAL_TEMPLATE "X is NOT equal to "
 
     enum Questions {
         less, bigger, equal

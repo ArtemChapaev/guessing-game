@@ -12,19 +12,14 @@ namespace ssd {
     public:
         MainClient(const std::string &, const unsigned short);
 
-        ~MainClient();
-
         void startGame(const std::string &);
 
     private:
         ClientNetworkHandler networkHandler;
-        const UserInterface userInterface;
 
-        int gameResult;
+        static std::unordered_map<std::string, std::string> createInitialRequest(const std::string &);
 
-        static std::unordered_map<std::string, std::string> createInitialRequest(const std::string &name);
-
-        static std::unordered_map<std::string, std::string> createRequest(Questions question, int questionArgument);
+        static std::unordered_map<std::string, std::string> createRequest(Questions, int);
 
         static void processResponse(const std::unordered_map<std::string, std::string> &, bool &, int &);
     };

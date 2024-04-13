@@ -2,7 +2,13 @@
 
 namespace ssd {
 
-    GameManager::GameManager(const NumberRange &range, int attempts) : number(range), leftAttempts(attempts) {}
+    GameManager::GameManager(const NumberRange &range, int attempts) : number(range), leftAttempts(attempts) {
+        unsigned long valuesCount = number.rightBorder - number.leftBorder;
+
+        if (valuesCount > 25) {
+            leftAttempts = static_cast<int>(leftAttempts * (log(valuesCount) / log(5) - 1));
+        }
+    }
 
     std::pair<int, int> GameManager::getNumberBorders() const{
         return std::make_pair(number.leftBorder, number.rightBorder);

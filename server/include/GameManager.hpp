@@ -3,6 +3,8 @@
 
 #include <utility>
 
+#include <cmath>
+
 #include "Questions.hpp"
 #include "NumberRange.hpp"
 #include "Number.hpp"

@@ -1,6 +1,8 @@
 #ifndef NUMBER_HPP
 #define NUMBER_HPP
 
+#include <iostream>
+
 #include <cstdlib>
 
 #include "NumberRange.hpp"

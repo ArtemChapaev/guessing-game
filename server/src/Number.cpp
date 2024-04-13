@@ -1,15 +1,17 @@
 #include "Number.hpp"
 
-#include <iostream>
-
 namespace ssd {
 
-    Number::Number(const NumberRange& range) {
-        leftBorder = rand() % (range.highLeftBorder - range.lowLeftBorder) + range.lowLeftBorder;
-        rightBorder = rand() % (range.highRightBorder - range.lowRightBorder) + range.lowRightBorder;
+    Number::Number(const NumberRange &range) : number(0), leftBorder(0), rightBorder(0) {
+
+        while (leftBorder >= rightBorder) {
+            leftBorder = rand() % (range.getHighLeftBorder() - range.getLowLeftBorder()) + range.getLowLeftBorder();
+            rightBorder = rand() % (range.getHighRightBorder() - range.getLowRightBorder()) + range.getLowRightBorder();
+        }
+
         number = rand() % (rightBorder - leftBorder) + leftBorder;
 
-        std::cout << "[Number::Number] number is " << number << std::endl;
+        std::cout << "[Number::Number] Generated number is " << number << std::endl;
     }
 
 } // ssd namespace
