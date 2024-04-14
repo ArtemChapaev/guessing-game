@@ -4,18 +4,33 @@
 #include <unistd.h>
 #include <string>
 #include <ctime>
-
 #include "NumberRange.hpp"
 
+/**
+ * @struct ProgramArguments
+ * @brief Holds all configurable options for the program.
+ *
+ * This structure stores the values of various command-line parameters.
+ */
 struct ProgramArguments {
-    std::string host = "localhost";
-    short unsigned port = 1024u;
-    long seed = time(nullptr);
-    int attemptsCount = 5;
-    ssd::NumberRange range = {1, 10, 25, 30};
+    std::string host = "localhost"; ///< Default host address of the server.
+    unsigned short port = 1024u;    ///< Default port number for server connection.
+    long seed = time(nullptr);      ///< Seed for the random number generator, defaults to current time.
+    int attemptsCount = 5;          ///< Default number of attempts per 25 number range.
+    ssd::NumberRange range = {1, 10, 25, 30}; ///< Default number range for game.
 };
 
-
+/**
+ * @brief Parses command-line arguments to configure the program settings.
+ *
+ * This function interprets command-line options and fills a ProgramArguments struct with the specified values.
+ * It handles a variety of settings such as server address, port, random seed, and game parameters.
+ *
+ * @param argc Number of command-line arguments.
+ * @param argv Array of command-line argument strings.
+ * @return ProgramArguments A fully populated ProgramArguments struct.
+ * @exception std::invalid_argument Thrown if any argument is invalid or improperly formatted.
+ */
 ProgramArguments parseArguments(int argc, char **argv) {
     int opt;
     ProgramArguments args;

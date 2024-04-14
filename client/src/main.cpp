@@ -28,8 +28,15 @@ int main(int argc, char **argv) {
         }
     }
 
-    ssd::MainClient mainClient(host, port);
-    mainClient.startGame(name);
-
+    try {
+        ssd::MainClient mainClient(host, port);
+        mainClient.startGame(name);
+    } catch(const std::runtime_error& e) {
+        std::cerr << "Client application error: " << e.what() << std::endl;
+        return 1;
+    } catch(...) {
+        std::cerr << "Client application error: unexpected error" << std::endl;
+        return 2;
+    }
     return 0;
 }
