@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('classssd_1_1UserInterface.html',''); i
 </div><!--header-->
 <div class="contents">
 
-<p>A class responsible for handling all user interface-related interactions for the game.  
+<p>Provides static methods for displaying game-related information and processing user input.  
  <a href="classssd_1_1UserInterface.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="UserInterface_8hpp_source.html">UserInterface.hpp</a>&gt;</code></p>
@@ -99,58 +99,59 @@ $(document).ready(function(){initNavTree('classssd_1_1UserInterface.html',''); i
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb6efeb46c94b2df6771e6dacee71ce8"><td class="memItemLeft" align="right" valign="top">static std::pair&lt; Questions, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#aeb6efeb46c94b2df6771e6dacee71ce8">getUserInput</a> ()</td></tr>
-<tr class="memdesc:aeb6efeb46c94b2df6771e6dacee71ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get user input for the game, including question selection and answer.  <a href="classssd_1_1UserInterface.html#aeb6efeb46c94b2df6771e6dacee71ce8">More...</a><br /></td></tr>
+<tr class="memdesc:aeb6efeb46c94b2df6771e6dacee71ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get user input from the console.  <a href="classssd_1_1UserInterface.html#aeb6efeb46c94b2df6771e6dacee71ce8">More...</a><br /></td></tr>
 <tr class="separator:aeb6efeb46c94b2df6771e6dacee71ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacf1d5d5abb9653343f3a5f303acddaa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#aacf1d5d5abb9653343f3a5f303acddaa">prepareDisplay</a> ()</td></tr>
-<tr class="memdesc:aacf1d5d5abb9653343f3a5f303acddaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare the display for showing game information.  <a href="classssd_1_1UserInterface.html#aacf1d5d5abb9653343f3a5f303acddaa">More...</a><br /></td></tr>
+<tr class="memdesc:aacf1d5d5abb9653343f3a5f303acddaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares the display by clearing the console and setting up the initial view.  <a href="classssd_1_1UserInterface.html#aacf1d5d5abb9653343f3a5f303acddaa">More...</a><br /></td></tr>
 <tr class="separator:aacf1d5d5abb9653343f3a5f303acddaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa158129446b026ce95c7f4768fd759"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#aefa158129446b026ce95c7f4768fd759">displayMessage</a> (Questions question, bool isCorrect, int answer, int leftAttempts)</td></tr>
-<tr class="memdesc:aefa158129446b026ce95c7f4768fd759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a message based on the question, whether the answer was correct, and the number of attempts left.  <a href="classssd_1_1UserInterface.html#aefa158129446b026ce95c7f4768fd759">More...</a><br /></td></tr>
-<tr class="separator:aefa158129446b026ce95c7f4768fd759"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a295d5b52306977285eb5327835a124"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#a9a295d5b52306977285eb5327835a124">displayMessage</a> (int lowLeft, int highLeft, int highRight)</td></tr>
-<tr class="memdesc:a9a295d5b52306977285eb5327835a124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a message containing the number borders during initialization.  <a href="classssd_1_1UserInterface.html#a9a295d5b52306977285eb5327835a124">More...</a><br /></td></tr>
-<tr class="separator:a9a295d5b52306977285eb5327835a124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26dfc658fbee3ef8b97f10c177e3b6e4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#a26dfc658fbee3ef8b97f10c177e3b6e4">displayMessage</a> (Questions q, bool answer, int conditionValue, int leftAttempts)</td></tr>
+<tr class="memdesc:a26dfc658fbee3ef8b97f10c177e3b6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a message with the question result and remaining attempts.  <a href="classssd_1_1UserInterface.html#a26dfc658fbee3ef8b97f10c177e3b6e4">More...</a><br /></td></tr>
+<tr class="separator:a26dfc658fbee3ef8b97f10c177e3b6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0d4a68c742338592e4f204dd69649b4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#aa0d4a68c742338592e4f204dd69649b4">displayMessage</a> (int leftBorder, int rightBorder, int leftAttempts)</td></tr>
+<tr class="memdesc:aa0d4a68c742338592e4f204dd69649b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the initial message with the number range and the starting number of attempts.  <a href="classssd_1_1UserInterface.html#aa0d4a68c742338592e4f204dd69649b4">More...</a><br /></td></tr>
+<tr class="separator:aa0d4a68c742338592e4f204dd69649b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bc6f17b856c61bcec8ae2f8b6a308b2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#a6bc6f17b856c61bcec8ae2f8b6a308b2">displayLeftAttempts</a> (int leftAttempts)</td></tr>
-<tr class="memdesc:a6bc6f17b856c61bcec8ae2f8b6a308b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the number of attempts left for the user.  <a href="classssd_1_1UserInterface.html#a6bc6f17b856c61bcec8ae2f8b6a308b2">More...</a><br /></td></tr>
+<tr class="memdesc:a6bc6f17b856c61bcec8ae2f8b6a308b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the number of attempts left.  <a href="classssd_1_1UserInterface.html#a6bc6f17b856c61bcec8ae2f8b6a308b2">More...</a><br /></td></tr>
 <tr class="separator:a6bc6f17b856c61bcec8ae2f8b6a308b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05bd4bb56f0838ad4dd2c442cdce07a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#a05bd4bb56f0838ad4dd2c442cdce07a7">displayWin</a> ()</td></tr>
-<tr class="memdesc:a05bd4bb56f0838ad4dd2c442cdce07a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a win message to the user.  <a href="classssd_1_1UserInterface.html#a05bd4bb56f0838ad4dd2c442cdce07a7">More...</a><br /></td></tr>
+<tr class="memdesc:a05bd4bb56f0838ad4dd2c442cdce07a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a message indicating that the user has won the game.  <a href="classssd_1_1UserInterface.html#a05bd4bb56f0838ad4dd2c442cdce07a7">More...</a><br /></td></tr>
 <tr class="separator:a05bd4bb56f0838ad4dd2c442cdce07a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad25b5d717f882e94a5e414732f12a1f0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#ad25b5d717f882e94a5e414732f12a1f0">displayLoss</a> ()</td></tr>
-<tr class="memdesc:ad25b5d717f882e94a5e414732f12a1f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a loss message to the user.  <a href="classssd_1_1UserInterface.html#ad25b5d717f882e94a5e414732f12a1f0">More...</a><br /></td></tr>
+<tr class="memdesc:ad25b5d717f882e94a5e414732f12a1f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a message indicating that the user has lost the game.  <a href="classssd_1_1UserInterface.html#ad25b5d717f882e94a5e414732f12a1f0">More...</a><br /></td></tr>
 <tr class="separator:ad25b5d717f882e94a5e414732f12a1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a290726043d5a3313704160f99516d383"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#a290726043d5a3313704160f99516d383">displayServerError</a> ()</td></tr>
-<tr class="memdesc:a290726043d5a3313704160f99516d383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a server error message when the connection is lost.  <a href="classssd_1_1UserInterface.html#a290726043d5a3313704160f99516d383">More...</a><br /></td></tr>
+<tr class="memdesc:a290726043d5a3313704160f99516d383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a message indicating that the server has been disconnected.  <a href="classssd_1_1UserInterface.html#a290726043d5a3313704160f99516d383">More...</a><br /></td></tr>
 <tr class="separator:a290726043d5a3313704160f99516d383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a47791818750fa8e4f2437c6741953deb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#a47791818750fa8e4f2437c6741953deb">processUserInput</a> (char input)</td></tr>
-<tr class="memdesc:a47791818750fa8e4f2437c6741953deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process user input and convert it to an integer response.  <a href="classssd_1_1UserInterface.html#a47791818750fa8e4f2437c6741953deb">More...</a><br /></td></tr>
-<tr class="separator:a47791818750fa8e4f2437c6741953deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad63f9e8addaeee979caedb330acd6748"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#ad63f9e8addaeee979caedb330acd6748">processUserInput</a> (char ch)</td></tr>
+<tr class="memdesc:ad63f9e8addaeee979caedb330acd6748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the user input to identify the type of question.  <a href="classssd_1_1UserInterface.html#ad63f9e8addaeee979caedb330acd6748">More...</a><br /></td></tr>
+<tr class="separator:ad63f9e8addaeee979caedb330acd6748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc17ddb075b3a149ec05811a249a597e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#afc17ddb075b3a149ec05811a249a597e">setCursor</a> (unsigned x, unsigned y)</td></tr>
-<tr class="memdesc:afc17ddb075b3a149ec05811a249a597e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the cursor position for display in the console.  <a href="classssd_1_1UserInterface.html#afc17ddb075b3a149ec05811a249a597e">More...</a><br /></td></tr>
+<tr class="memdesc:afc17ddb075b3a149ec05811a249a597e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the cursor position in the console for display purposes.  <a href="classssd_1_1UserInterface.html#afc17ddb075b3a149ec05811a249a597e">More...</a><br /></td></tr>
 <tr class="separator:afc17ddb075b3a149ec05811a249a597e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a7308a2a6c1b7da8d0f0e22d74e9c88d6"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; const std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#a7308a2a6c1b7da8d0f0e22d74e9c88d6">questionMarks</a> = {&quot;&lt;&quot;, &quot;&gt;&quot;, &quot;=&quot;}</td></tr>
-<tr class="memdesc:a7308a2a6c1b7da8d0f0e22d74e9c88d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static descriptions of question marks.  <a href="classssd_1_1UserInterface.html#a7308a2a6c1b7da8d0f0e22d74e9c88d6">More...</a><br /></td></tr>
+<tr class="memdesc:a7308a2a6c1b7da8d0f0e22d74e9c88d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbols representing question types.  <a href="classssd_1_1UserInterface.html#a7308a2a6c1b7da8d0f0e22d74e9c88d6">More...</a><br /></td></tr>
 <tr class="separator:a7308a2a6c1b7da8d0f0e22d74e9c88d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abeb3c94d0196770311ab270c5f4e5c39"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; const std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#abeb3c94d0196770311ab270c5f4e5c39">questionDescriptions</a></td></tr>
-<tr class="memdesc:abeb3c94d0196770311ab270c5f4e5c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptions for each question type.  <a href="classssd_1_1UserInterface.html#abeb3c94d0196770311ab270c5f4e5c39">More...</a><br /></td></tr>
+<tr class="memdesc:abeb3c94d0196770311ab270c5f4e5c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptions of question types.  <a href="classssd_1_1UserInterface.html#abeb3c94d0196770311ab270c5f4e5c39">More...</a><br /></td></tr>
 <tr class="separator:abeb3c94d0196770311ab270c5f4e5c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bd1573cef0141aafccc7a05fa267510"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; const std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#a6bd1573cef0141aafccc7a05fa267510">correctAnswers</a></td></tr>
-<tr class="memdesc:a6bd1573cef0141aafccc7a05fa267510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Responses for correct answers.  <a href="classssd_1_1UserInterface.html#a6bd1573cef0141aafccc7a05fa267510">More...</a><br /></td></tr>
+<tr class="memdesc:a6bd1573cef0141aafccc7a05fa267510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templates for correct answers.  <a href="classssd_1_1UserInterface.html#a6bd1573cef0141aafccc7a05fa267510">More...</a><br /></td></tr>
 <tr class="separator:a6bd1573cef0141aafccc7a05fa267510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca3d641c3dc0f1dc780ee02fc21ed63f"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; const std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1UserInterface.html#aca3d641c3dc0f1dc780ee02fc21ed63f">wrongAnswers</a></td></tr>
-<tr class="memdesc:aca3d641c3dc0f1dc780ee02fc21ed63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Responses for incorrect answers.  <a href="classssd_1_1UserInterface.html#aca3d641c3dc0f1dc780ee02fc21ed63f">More...</a><br /></td></tr>
+<tr class="memdesc:aca3d641c3dc0f1dc780ee02fc21ed63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templates for wrong answers.  <a href="classssd_1_1UserInterface.html#aca3d641c3dc0f1dc780ee02fc21ed63f">More...</a><br /></td></tr>
 <tr class="separator:aca3d641c3dc0f1dc780ee02fc21ed63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class responsible for handling all user interface-related interactions for the game. </p>
+<div class="textblock"><p>Provides static methods for displaying game-related information and processing user input. </p>
+<p>This class manages all user interactions in the console. It provides methods to display messages, game status, and to handle user input. </p>
 
-<p class="definition">Definition at line <a class="el" href="UserInterface_8hpp_source.html#l00022">22</a> of file <a class="el" href="UserInterface_8hpp_source.html">UserInterface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserInterface_8hpp_source.html#l00026">26</a> of file <a class="el" href="UserInterface_8hpp_source.html">UserInterface.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6bc6f17b856c61bcec8ae2f8b6a308b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6bc6f17b856c61bcec8ae2f8b6a308b2">&#9670;&nbsp;</a></span>displayLeftAttempts()</h2>
@@ -176,10 +177,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Display the number of attempts left for the user. </p>
+<p>Displays the number of attempts left. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">leftAttempts</td><td>The number of left attempts. </td></tr>
+    <tr><td class="paramname">leftAttempts</td><td>The number of attempts left. </td></tr>
   </table>
   </dd>
 </dl>
@@ -211,14 +212,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Display a loss message to the user. </p>
+<p>Displays a message indicating that the user has lost the game. </p>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8cpp_source.html#l00048">48</a> of file <a class="el" href="UserInterface_8cpp_source.html">UserInterface.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a9a295d5b52306977285eb5327835a124"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a295d5b52306977285eb5327835a124">&#9670;&nbsp;</a></span>displayMessage() <span class="overload">[1/2]</span></h2>
+<a id="aa0d4a68c742338592e4f204dd69649b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d4a68c742338592e4f204dd69649b4">&#9670;&nbsp;</a></span>displayMessage() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,73 +231,13 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void ssd::UserInterface::displayMessage </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>lowLeft</em>, </td>
+          <td class="paramname"><em>leftBorder</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>highLeft</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>highRight</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Display a message containing the number borders during initialization. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lowLeft</td><td>Lower left border. </td></tr>
-    <tr><td class="paramname">highLeft</td><td>Higher left border. </td></tr>
-    <tr><td class="paramname">highRight</td><td>Higher right border. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="UserInterface_8cpp_source.html#l00038">38</a> of file <a class="el" href="UserInterface_8cpp_source.html">UserInterface.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aefa158129446b026ce95c7f4768fd759"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefa158129446b026ce95c7f4768fd759">&#9670;&nbsp;</a></span>displayMessage() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ssd::UserInterface::displayMessage </td>
-          <td>(</td>
-          <td class="paramtype">Questions&#160;</td>
-          <td class="paramname"><em>question</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isCorrect</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>answer</em>, </td>
+          <td class="paramname"><em>rightBorder</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -317,13 +258,73 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Display a message based on the question, whether the answer was correct, and the number of attempts left. </p>
+<p>Displays the initial message with the number range and the starting number of attempts. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">question</td><td>The current question. </td></tr>
-    <tr><td class="paramname">isCorrect</td><td>Whether the user's answer was correct. </td></tr>
-    <tr><td class="paramname">answer</td><td>The user's answer. </td></tr>
-    <tr><td class="paramname">leftAttempts</td><td><a class="el" href="structssd_1_1Number.html" title="Structure to represent a number within a specific range.">Number</a> of attempts left. </td></tr>
+    <tr><td class="paramname">leftBorder</td><td>The lower boundary of the number range. </td></tr>
+    <tr><td class="paramname">rightBorder</td><td>The upper boundary of the number range. </td></tr>
+    <tr><td class="paramname">leftAttempts</td><td>The initial number of attempts. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="UserInterface_8cpp_source.html#l00038">38</a> of file <a class="el" href="UserInterface_8cpp_source.html">UserInterface.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a26dfc658fbee3ef8b97f10c177e3b6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26dfc658fbee3ef8b97f10c177e3b6e4">&#9670;&nbsp;</a></span>displayMessage() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ssd::UserInterface::displayMessage </td>
+          <td>(</td>
+          <td class="paramtype">Questions&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>answer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>conditionValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>leftAttempts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Displays a message with the question result and remaining attempts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>The question asked by the user. </td></tr>
+    <tr><td class="paramname">answer</td><td>The answer to the question (true if the guess was correct). </td></tr>
+    <tr><td class="paramname">conditionValue</td><td>The number associated with the question. </td></tr>
+    <tr><td class="paramname">leftAttempts</td><td>The number of attempts left. </td></tr>
   </table>
   </dd>
 </dl>
@@ -355,7 +356,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Display a server error message when the connection is lost. </p>
+<p>Displays a message indicating that the server has been disconnected. </p>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8cpp_source.html#l00052">52</a> of file <a class="el" href="UserInterface_8cpp_source.html">UserInterface.cpp</a>.</p>
 
@@ -384,7 +385,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Display a win message to the user. </p>
+<p>Displays a message indicating that the user has won the game. </p>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8cpp_source.html#l00044">44</a> of file <a class="el" href="UserInterface_8cpp_source.html">UserInterface.cpp</a>.</p>
 
@@ -413,8 +414,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get user input for the game, including question selection and answer. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::pair&lt;Questions, int&gt; A pair containing the selected question and the user's answer. </dd></dl>
+<p>Get user input from the console. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::pair&lt;Questions, int&gt; A pair containing the type of question and the associated value. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8cpp_source.html#l00061">61</a> of file <a class="el" href="UserInterface_8cpp_source.html">UserInterface.cpp</a>.</p>
 
@@ -443,14 +444,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Prepare the display for showing game information. </p>
+<p>Prepares the display by clearing the console and setting up the initial view. </p>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8cpp_source.html#l00013">13</a> of file <a class="el" href="UserInterface_8cpp_source.html">UserInterface.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a47791818750fa8e4f2437c6741953deb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47791818750fa8e4f2437c6741953deb">&#9670;&nbsp;</a></span>processUserInput()</h2>
+<a id="ad63f9e8addaeee979caedb330acd6748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63f9e8addaeee979caedb330acd6748">&#9670;&nbsp;</a></span>processUserInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -462,7 +463,7 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">int ssd::UserInterface::processUserInput </td>
           <td>(</td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -473,14 +474,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Process user input and convert it to an integer response. </p>
+<p>Processes the user input to identify the type of question. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td>Character input from the user. </td></tr>
+    <tr><td class="paramname">ch</td><td>The character representing the question type. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int Converted integer value of the input. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int The index of the question type or -1 if invalid. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8cpp_source.html#l00086">86</a> of file <a class="el" href="UserInterface_8cpp_source.html">UserInterface.cpp</a>.</p>
 
@@ -520,11 +521,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the cursor position for display in the console. </p>
+<p>Sets the cursor position in the console for display purposes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The horizontal position. </td></tr>
-    <tr><td class="paramname">y</td><td>The vertical position. </td></tr>
+    <tr><td class="paramname">x</td><td>The row position. </td></tr>
+    <tr><td class="paramname">y</td><td>The column position. </td></tr>
   </table>
   </dd>
 </dl>
@@ -556,7 +557,7 @@ Static Private Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {LESS_TEMPLATE, BIGGER_TEMPLATE,</div>
 <div class="line">                                                                          EQUAL_TEMPLATE}</div>
 </div><!-- fragment -->
-<p>Responses for correct answers. </p>
+<p>Templates for correct answers. </p>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8hpp_source.html#l00080">80</a> of file <a class="el" href="UserInterface_8hpp_source.html">UserInterface.hpp</a>.</p>
 
@@ -584,7 +585,7 @@ Static Private Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {LESS_QUESTION, BIGGER_QUESTION,</div>
 <div class="line">                                                                                EQUAL_QUESTION}</div>
 </div><!-- fragment -->
-<p>Descriptions for each question type. </p>
+<p>Descriptions of question types. </p>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8hpp_source.html#l00079">79</a> of file <a class="el" href="UserInterface_8hpp_source.html">UserInterface.hpp</a>.</p>
 
@@ -610,7 +611,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Static descriptions of question marks. </p>
+<p>Symbols representing question types. </p>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8hpp_source.html#l00078">78</a> of file <a class="el" href="UserInterface_8hpp_source.html">UserInterface.hpp</a>.</p>
 
@@ -638,7 +639,7 @@ Static Private Attributes</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {NON_LESS_TEMPLATE, NON_BIGGER_TEMPLATE,</div>
 <div class="line">                                                                        NON_EQUAL_TEMPLATE}</div>
 </div><!-- fragment -->
-<p>Responses for incorrect answers. </p>
+<p>Templates for wrong answers. </p>
 
 <p class="definition">Definition at line <a class="el" href="UserInterface_8hpp_source.html#l00081">81</a> of file <a class="el" href="UserInterface_8hpp_source.html">UserInterface.hpp</a>.</p>
 

@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('classssd_1_1GameManager.html',''); ini
 </div><!--header-->
 <div class="contents">
 
-<p>Class responsible for managing the state and logic of the game.  
+<p>Manages the game logic for the number guessing game.  
  <a href="classssd_1_1GameManager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="GameManager_8hpp_source.html">GameManager.hpp</a>&gt;</code></p>
@@ -102,35 +102,36 @@ Collaboration diagram for ssd::GameManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acc3f73e96f255014afa5a44fc2c8f743"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1GameManager.html#acc3f73e96f255014afa5a44fc2c8f743">GameManager</a> (const <a class="el" href="classssd_1_1NumberRange.html">NumberRange</a> &amp;range, int maxAttempts)</td></tr>
-<tr class="memdesc:acc3f73e96f255014afa5a44fc2c8f743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Game Manager object.  <a href="classssd_1_1GameManager.html#acc3f73e96f255014afa5a44fc2c8f743">More...</a><br /></td></tr>
-<tr class="separator:acc3f73e96f255014afa5a44fc2c8f743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57680d9fff8c4f5889e3e743f6933953"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1GameManager.html#a57680d9fff8c4f5889e3e743f6933953">GameManager</a> (const <a class="el" href="classssd_1_1NumberRange.html">NumberRange</a> &amp;range, int attempts)</td></tr>
+<tr class="memdesc:a57680d9fff8c4f5889e3e743f6933953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classssd_1_1GameManager.html" title="Manages the game logic for the number guessing game.">GameManager</a> object.  <a href="classssd_1_1GameManager.html#a57680d9fff8c4f5889e3e743f6933953">More...</a><br /></td></tr>
+<tr class="separator:a57680d9fff8c4f5889e3e743f6933953"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4129a492b51a0dc2f5c87fec30523b0f"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1GameManager.html#a4129a492b51a0dc2f5c87fec30523b0f">getNumberBorders</a> () const</td></tr>
-<tr class="memdesc:a4129a492b51a0dc2f5c87fec30523b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the borders of the number range used in the game.  <a href="classssd_1_1GameManager.html#a4129a492b51a0dc2f5c87fec30523b0f">More...</a><br /></td></tr>
+<tr class="memdesc:a4129a492b51a0dc2f5c87fec30523b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the borders within which the number was generated.  <a href="classssd_1_1GameManager.html#a4129a492b51a0dc2f5c87fec30523b0f">More...</a><br /></td></tr>
 <tr class="separator:a4129a492b51a0dc2f5c87fec30523b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e4deaba7e98251b37124af31a4ae8f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1GameManager.html#a04e4deaba7e98251b37124af31a4ae8f">getLeftAttempts</a> () const</td></tr>
-<tr class="memdesc:a04e4deaba7e98251b37124af31a4ae8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of attempts left for the player.  <a href="classssd_1_1GameManager.html#a04e4deaba7e98251b37124af31a4ae8f">More...</a><br /></td></tr>
+<tr class="memdesc:a04e4deaba7e98251b37124af31a4ae8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of remaining attempts the player has to guess the number.  <a href="classssd_1_1GameManager.html#a04e4deaba7e98251b37124af31a4ae8f">More...</a><br /></td></tr>
 <tr class="separator:a04e4deaba7e98251b37124af31a4ae8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ab1ab504e85e97f733a863b06992f82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1GameManager.html#a5ab1ab504e85e97f733a863b06992f82">checkQuestion</a> (Questions question, int answer)</td></tr>
-<tr class="memdesc:a5ab1ab504e85e97f733a863b06992f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check a player's answer to a question and update game state.  <a href="classssd_1_1GameManager.html#a5ab1ab504e85e97f733a863b06992f82">More...</a><br /></td></tr>
-<tr class="separator:a5ab1ab504e85e97f733a863b06992f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f0de5f45bec2bcf72ae51111ad66e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1GameManager.html#ad4f0de5f45bec2bcf72ae51111ad66e7">checkQuestion</a> (Questions question, int questionValue)</td></tr>
+<tr class="memdesc:ad4f0de5f45bec2bcf72ae51111ad66e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the player's question against the secret number and updates attempts.  <a href="classssd_1_1GameManager.html#ad4f0de5f45bec2bcf72ae51111ad66e7">More...</a><br /></td></tr>
+<tr class="separator:ad4f0de5f45bec2bcf72ae51111ad66e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a24b6d5d2b73308f7b50e1f415871e42e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structssd_1_1Number.html">Number</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1GameManager.html#a24b6d5d2b73308f7b50e1f415871e42e">number</a></td></tr>
-<tr class="memdesc:a24b6d5d2b73308f7b50e1f415871e42e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object representing the game's secret number.  <a href="classssd_1_1GameManager.html#a24b6d5d2b73308f7b50e1f415871e42e">More...</a><br /></td></tr>
+<tr class="memdesc:a24b6d5d2b73308f7b50e1f415871e42e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The secret number object that holds the value and range.  <a href="classssd_1_1GameManager.html#a24b6d5d2b73308f7b50e1f415871e42e">More...</a><br /></td></tr>
 <tr class="separator:a24b6d5d2b73308f7b50e1f415871e42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b857218f8bb5b00996340f98154d4e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1GameManager.html#a9b857218f8bb5b00996340f98154d4e4">leftAttempts</a></td></tr>
-<tr class="memdesc:a9b857218f8bb5b00996340f98154d4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of attempts left for the player.  <a href="classssd_1_1GameManager.html#a9b857218f8bb5b00996340f98154d4e4">More...</a><br /></td></tr>
+<tr class="memdesc:a9b857218f8bb5b00996340f98154d4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of attempts left for guessing the number.  <a href="classssd_1_1GameManager.html#a9b857218f8bb5b00996340f98154d4e4">More...</a><br /></td></tr>
 <tr class="separator:a9b857218f8bb5b00996340f98154d4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class responsible for managing the state and logic of the game. </p>
+<div class="textblock"><p>Manages the game logic for the number guessing game. </p>
+<p>This class handles the game state including the secret number, checking guesses, and tracking the number of remaining attempts. </p>
 
-<p class="definition">Definition at line <a class="el" href="GameManager_8hpp_source.html#l00015">15</a> of file <a class="el" href="GameManager_8hpp_source.html">GameManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GameManager_8hpp_source.html#l00018">18</a> of file <a class="el" href="GameManager_8hpp_source.html">GameManager.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="acc3f73e96f255014afa5a44fc2c8f743"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc3f73e96f255014afa5a44fc2c8f743">&#9670;&nbsp;</a></span>GameManager()</h2>
+<a id="a57680d9fff8c4f5889e3e743f6933953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57680d9fff8c4f5889e3e743f6933953">&#9670;&nbsp;</a></span>GameManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +146,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxAttempts</em>&#160;</td>
+          <td class="paramname"><em>attempts</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -155,11 +156,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new Game Manager object. </p>
+<p>Constructs a new <a class="el" href="classssd_1_1GameManager.html" title="Manages the game logic for the number guessing game.">GameManager</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">range</td><td>The range within which the game number is to be selected. </td></tr>
-    <tr><td class="paramname">maxAttempts</td><td>The maximum number of attempts a player is allowed. </td></tr>
+    <tr><td class="paramname">range</td><td>The range from which the secret number is generated. </td></tr>
+    <tr><td class="paramname">attempts</td><td>The initial number of attempts allowed for guessing. </td></tr>
   </table>
   </dd>
 </dl>
@@ -169,8 +170,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5ab1ab504e85e97f733a863b06992f82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ab1ab504e85e97f733a863b06992f82">&#9670;&nbsp;</a></span>checkQuestion()</h2>
+<a id="ad4f0de5f45bec2bcf72ae51111ad66e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f0de5f45bec2bcf72ae51111ad66e7">&#9670;&nbsp;</a></span>checkQuestion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +186,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>answer</em>&#160;</td>
+          <td class="paramname"><em>questionValue</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -195,15 +196,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check a player's answer to a question and update game state. </p>
+<p>Checks the player's question against the secret number and updates attempts. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">question</td><td>The question being answered. </td></tr>
-    <tr><td class="paramname">answer</td><td>The player's answer. </td></tr>
+    <tr><td class="paramname">question</td><td>The type of question being asked (less, bigger, or equal). </td></tr>
+    <tr><td class="paramname">questionValue</td><td>The numerical value associated with the question. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool True if the answer is correct, false otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool True if the guess was correct, false otherwise. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="GameManager_8cpp_source.html#l00021">21</a> of file <a class="el" href="GameManager_8cpp_source.html">GameManager.cpp</a>.</p>
 
@@ -224,8 +225,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the number of attempts left for the player. </p>
-<dl class="section return"><dt>Returns</dt><dd>int The number of attempts left. </dd></dl>
+<p>Gets the number of remaining attempts the player has to guess the number. </p>
+<dl class="section return"><dt>Returns</dt><dd>int The number of remaining attempts. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="GameManager_8cpp_source.html#l00017">17</a> of file <a class="el" href="GameManager_8cpp_source.html">GameManager.cpp</a>.</p>
 
@@ -246,8 +247,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the borders of the number range used in the game. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::pair&lt;int, int&gt; A pair representing the minimum and maximum values of the range. </dd></dl>
+<p>Gets the borders within which the number was generated. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::pair&lt;int, int&gt; The pair of integers representing the lower and upper borders. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="GameManager_8cpp_source.html#l00013">13</a> of file <a class="el" href="GameManager_8cpp_source.html">GameManager.cpp</a>.</p>
 
@@ -274,9 +275,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The number of attempts left for the player. </p>
+<p>The number of attempts left for guessing the number. </p>
 
-<p class="definition">Definition at line <a class="el" href="GameManager_8hpp_source.html#l00050">50</a> of file <a class="el" href="GameManager_8hpp_source.html">GameManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GameManager_8hpp_source.html#l00049">49</a> of file <a class="el" href="GameManager_8hpp_source.html">GameManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -300,9 +301,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Object representing the game's secret number. </p>
+<p>The secret number object that holds the value and range. </p>
 
-<p class="definition">Definition at line <a class="el" href="GameManager_8hpp_source.html#l00049">49</a> of file <a class="el" href="GameManager_8hpp_source.html">GameManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GameManager_8hpp_source.html#l00048">48</a> of file <a class="el" href="GameManager_8hpp_source.html">GameManager.hpp</a>.</p>
 
 </div>
 </div>

@@ -7,7 +7,7 @@ var classssd_1_1ServerNetworkHandler =
     [ "operator=", "classssd_1_1ServerNetworkHandler.html#a19505172ef67f2ca43cea391fd871497", null ],
     [ "operator=", "classssd_1_1ServerNetworkHandler.html#ae4a35dc4451ccdf965f1f024759736dc", null ],
     [ "receiveRequest", "classssd_1_1ServerNetworkHandler.html#aa531c7c9d598183ba451c973f40b98f7", null ],
-    [ "sendResponse", "classssd_1_1ServerNetworkHandler.html#ade16956fb7e1e61d0ae25fe841e8e29a", null ],
+    [ "sendResponse", "classssd_1_1ServerNetworkHandler.html#a7477475c0659a089e3cd20c7468b4e2d", null ],
     [ "buffer", "classssd_1_1ServerNetworkHandler.html#a8910e0f9d30e9d89dd741676c5479289", null ],
     [ "clientSocket", "classssd_1_1ServerNetworkHandler.html#a29ae4bbbfaeabd23959e24034dfe0319", null ]
 ];

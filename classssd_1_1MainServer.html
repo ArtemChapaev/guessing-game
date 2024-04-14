@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('classssd_1_1MainServer.html',''); init
 </div><!--header-->
 <div class="contents">
 
-<p>Class that represents the main server responsible for managing client connections and game sessions.  
+<p>The main server application managing client connections.  
  <a href="classssd_1_1MainServer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="MainServer_8hpp_source.html">MainServer.hpp</a>&gt;</code></p>
@@ -98,28 +98,29 @@ $(document).ready(function(){initNavTree('classssd_1_1MainServer.html',''); init
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad3e655838b91d9e9908803c5f5064faf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1MainServer.html#ad3e655838b91d9e9908803c5f5064faf">MainServer</a> (const std::string &amp;<a class="el" href="classssd_1_1MainServer.html#a4785155a2e4d732582885e132543c014">host</a>, short unsigned <a class="el" href="classssd_1_1MainServer.html#af80f9a586aa6b3f399694c5222a1fa09">port</a>)</td></tr>
-<tr class="memdesc:ad3e655838b91d9e9908803c5f5064faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Main Server object.  <a href="classssd_1_1MainServer.html#ad3e655838b91d9e9908803c5f5064faf">More...</a><br /></td></tr>
+<tr class="memdesc:ad3e655838b91d9e9908803c5f5064faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new Main Server object.  <a href="classssd_1_1MainServer.html#ad3e655838b91d9e9908803c5f5064faf">More...</a><br /></td></tr>
 <tr class="separator:ad3e655838b91d9e9908803c5f5064faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accc6a10c4fc4a2091092902b8a52c396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1MainServer.html#accc6a10c4fc4a2091092902b8a52c396">run</a> (const <a class="el" href="classssd_1_1NumberRange.html">NumberRange</a> &amp;range, int maxClients)</td></tr>
-<tr class="memdesc:accc6a10c4fc4a2091092902b8a52c396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the server, accepting client connections and creating game sessions.  <a href="classssd_1_1MainServer.html#accc6a10c4fc4a2091092902b8a52c396">More...</a><br /></td></tr>
-<tr class="separator:accc6a10c4fc4a2091092902b8a52c396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c75d0d3af86db82f12baea02794aadb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1MainServer.html#a2c75d0d3af86db82f12baea02794aadb">run</a> (const <a class="el" href="classssd_1_1NumberRange.html">NumberRange</a> &amp;range, int initialAttemptsCount)</td></tr>
+<tr class="memdesc:a2c75d0d3af86db82f12baea02794aadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the server, accepting client connections.  <a href="classssd_1_1MainServer.html#a2c75d0d3af86db82f12baea02794aadb">More...</a><br /></td></tr>
+<tr class="separator:a2c75d0d3af86db82f12baea02794aadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4785155a2e4d732582885e132543c014"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1MainServer.html#a4785155a2e4d732582885e132543c014">host</a></td></tr>
-<tr class="memdesc:a4785155a2e4d732582885e132543c014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hostname or IP address to bind the server to.  <a href="classssd_1_1MainServer.html#a4785155a2e4d732582885e132543c014">More...</a><br /></td></tr>
+<tr class="memdesc:a4785155a2e4d732582885e132543c014"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hostname or IP address of the server.  <a href="classssd_1_1MainServer.html#a4785155a2e4d732582885e132543c014">More...</a><br /></td></tr>
 <tr class="separator:a4785155a2e4d732582885e132543c014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af80f9a586aa6b3f399694c5222a1fa09"><td class="memItemLeft" align="right" valign="top">const unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1MainServer.html#af80f9a586aa6b3f399694c5222a1fa09">port</a></td></tr>
-<tr class="memdesc:af80f9a586aa6b3f399694c5222a1fa09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port number on which the server will listen.  <a href="classssd_1_1MainServer.html#af80f9a586aa6b3f399694c5222a1fa09">More...</a><br /></td></tr>
+<tr class="memdesc:af80f9a586aa6b3f399694c5222a1fa09"><td class="mdescLeft">&#160;</td><td class="mdescRight">The port on which the server listens.  <a href="classssd_1_1MainServer.html#af80f9a586aa6b3f399694c5222a1fa09">More...</a><br /></td></tr>
 <tr class="separator:af80f9a586aa6b3f399694c5222a1fa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a733a5868d1774a79997bae42521c4057"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1MainServer.html#a733a5868d1774a79997bae42521c4057">server_socket</a></td></tr>
-<tr class="memdesc:a733a5868d1774a79997bae42521c4057"><td class="mdescLeft">&#160;</td><td class="mdescRight">File descriptor for the server's listening socket.  <a href="classssd_1_1MainServer.html#a733a5868d1774a79997bae42521c4057">More...</a><br /></td></tr>
+<tr class="memdesc:a733a5868d1774a79997bae42521c4057"><td class="mdescLeft">&#160;</td><td class="mdescRight">The server socket for accepting client connections.  <a href="classssd_1_1MainServer.html#a733a5868d1774a79997bae42521c4057">More...</a><br /></td></tr>
 <tr class="separator:a733a5868d1774a79997bae42521c4057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class that represents the main server responsible for managing client connections and game sessions. </p>
+<div class="textblock"><p>The main server application managing client connections. </p>
+<p>This class initializes the server socket, listens for client connections, and spawns threads to handle each client connection. </p>
 
-<p class="definition">Definition at line <a class="el" href="MainServer_8hpp_source.html#l00020">20</a> of file <a class="el" href="MainServer_8hpp_source.html">MainServer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MainServer_8hpp_source.html#l00024">24</a> of file <a class="el" href="MainServer_8hpp_source.html">MainServer.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad3e655838b91d9e9908803c5f5064faf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3e655838b91d9e9908803c5f5064faf">&#9670;&nbsp;</a></span>MainServer()</h2>
@@ -147,11 +148,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new Main Server object. </p>
+<p>Constructs a new Main Server object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">host</td><td>The hostname or IP address to bind the server to. </td></tr>
-    <tr><td class="paramname">port</td><td>The port number on which the server will listen. </td></tr>
+    <tr><td class="paramname">host</td><td>The hostname or IP address on which the server will listen. </td></tr>
+    <tr><td class="paramname">port</td><td>The port on which the server will listen. </td></tr>
   </table>
   </dd>
 </dl>
@@ -161,8 +162,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="accc6a10c4fc4a2091092902b8a52c396"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accc6a10c4fc4a2091092902b8a52c396">&#9670;&nbsp;</a></span>run()</h2>
+<a id="a2c75d0d3af86db82f12baea02794aadb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c75d0d3af86db82f12baea02794aadb">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +178,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxClients</em>&#160;</td>
+          <td class="paramname"><em>initialAttemptsCount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,11 +188,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Starts the server, accepting client connections and creating game sessions. </p>
+<p>Runs the server, accepting client connections. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">range</td><td>The range of numbers that will be used in the games. </td></tr>
-    <tr><td class="paramname">maxClients</td><td>The maximum number of concurrent client connections. </td></tr>
+    <tr><td class="paramname">range</td><td>The range within which the number to be guessed is generated. </td></tr>
+    <tr><td class="paramname">initialAttemptsCount</td><td>Initial number of attempts allowed for the game. </td></tr>
   </table>
   </dd>
 </dl>
@@ -221,9 +222,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hostname or IP address to bind the server to. </p>
+<p>The hostname or IP address of the server. </p>
 
-<p class="definition">Definition at line <a class="el" href="MainServer_8hpp_source.html#l00039">39</a> of file <a class="el" href="MainServer_8hpp_source.html">MainServer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MainServer_8hpp_source.html#l00041">41</a> of file <a class="el" href="MainServer_8hpp_source.html">MainServer.hpp</a>.</p>
 
 </div>
 </div>
@@ -247,9 +248,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Port number on which the server will listen. </p>
+<p>The port on which the server listens. </p>
 
-<p class="definition">Definition at line <a class="el" href="MainServer_8hpp_source.html#l00040">40</a> of file <a class="el" href="MainServer_8hpp_source.html">MainServer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MainServer_8hpp_source.html#l00042">42</a> of file <a class="el" href="MainServer_8hpp_source.html">MainServer.hpp</a>.</p>
 
 </div>
 </div>
@@ -273,9 +274,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>File descriptor for the server's listening socket. </p>
+<p>The server socket for accepting client connections. </p>
 
-<p class="definition">Definition at line <a class="el" href="MainServer_8hpp_source.html#l00041">41</a> of file <a class="el" href="MainServer_8hpp_source.html">MainServer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MainServer_8hpp_source.html#l00043">43</a> of file <a class="el" href="MainServer_8hpp_source.html">MainServer.hpp</a>.</p>
 
 </div>
 </div>

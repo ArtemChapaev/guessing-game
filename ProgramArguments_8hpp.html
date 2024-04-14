@@ -108,13 +108,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProgramArguments.html">ProgramArguments</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold and manage program arguments.  <a href="structProgramArguments.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds all configurable options for the program.  <a href="structProgramArguments.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6e6696d35e5b6e19a53e408febf024e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structProgramArguments.html">ProgramArguments</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ProgramArguments_8hpp.html#a6e6696d35e5b6e19a53e408febf024e3">parseArguments</a> (int argc, char **argv)</td></tr>
-<tr class="memdesc:a6e6696d35e5b6e19a53e408febf024e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses command line arguments to configure program settings.  <a href="ProgramArguments_8hpp.html#a6e6696d35e5b6e19a53e408febf024e3">More...</a><br /></td></tr>
+<tr class="memdesc:a6e6696d35e5b6e19a53e408febf024e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses command-line arguments to configure the program settings.  <a href="ProgramArguments_8hpp.html#a6e6696d35e5b6e19a53e408febf024e3">More...</a><br /></td></tr>
 <tr class="separator:a6e6696d35e5b6e19a53e408febf024e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -144,23 +144,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Parses command line arguments to configure program settings. </p>
+<p>Parses command-line arguments to configure the program settings. </p>
+<p>This function interprets command-line options and fills a <a class="el" href="structProgramArguments.html" title="Holds all configurable options for the program.">ProgramArguments</a> struct with the specified values. It handles a variety of settings such as server address, port, random seed, and game parameters.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">argc</td><td>Number of command line arguments. </td></tr>
-    <tr><td class="paramname">argv</td><td>Array of command line argument strings. </td></tr>
+    <tr><td class="paramname">argc</td><td>Number of command-line arguments. </td></tr>
+    <tr><td class="paramname">argv</td><td>Array of command-line argument strings. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structProgramArguments.html" title="Structure to hold and manage program arguments.">ProgramArguments</a> The configured program arguments. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structProgramArguments.html" title="Holds all configurable options for the program.">ProgramArguments</a> A fully populated <a class="el" href="structProgramArguments.html" title="Holds all configurable options for the program.">ProgramArguments</a> struct. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>If provided arguments are not valid. </td></tr>
+    <tr><td class="paramname">std::invalid_argument</td><td>Thrown if any argument is invalid or improperly formatted. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00029">29</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00034">34</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
 
 </div>
 </div>

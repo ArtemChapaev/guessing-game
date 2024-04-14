@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('structProgramArguments.html',''); init
 </div><!--header-->
 <div class="contents">
 
-<p>Structure to hold and manage program arguments.  
+<p>Holds all configurable options for the program.  
  <a href="structProgramArguments.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>&gt;</code></p>
@@ -102,20 +102,26 @@ Collaboration diagram for ProgramArguments:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a4e37fe342a8939d59dba183e2391dba4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProgramArguments.html#a4e37fe342a8939d59dba183e2391dba4">host</a> = &quot;localhost&quot;</td></tr>
+<tr class="memdesc:a4e37fe342a8939d59dba183e2391dba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default host address of the server.  <a href="structProgramArguments.html#a4e37fe342a8939d59dba183e2391dba4">More...</a><br /></td></tr>
 <tr class="separator:a4e37fe342a8939d59dba183e2391dba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f162dca126e69cc7865104f03bf194"><td class="memItemLeft" align="right" valign="top">short unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProgramArguments.html#a13f162dca126e69cc7865104f03bf194">port</a> = 1024u</td></tr>
-<tr class="separator:a13f162dca126e69cc7865104f03bf194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf91cd643d9abcf2b18440f8555838d"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProgramArguments.html#a0bf91cd643d9abcf2b18440f8555838d">port</a> = 1024u</td></tr>
+<tr class="memdesc:a0bf91cd643d9abcf2b18440f8555838d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default port number for server connection.  <a href="structProgramArguments.html#a0bf91cd643d9abcf2b18440f8555838d">More...</a><br /></td></tr>
+<tr class="separator:a0bf91cd643d9abcf2b18440f8555838d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad158ad05aa442ede78921f25095911d3"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProgramArguments.html#ad158ad05aa442ede78921f25095911d3">seed</a> = time(nullptr)</td></tr>
+<tr class="memdesc:ad158ad05aa442ede78921f25095911d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed for the random number generator, defaults to current time.  <a href="structProgramArguments.html#ad158ad05aa442ede78921f25095911d3">More...</a><br /></td></tr>
 <tr class="separator:ad158ad05aa442ede78921f25095911d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a372774d79c4b8a9a941bedf0c0469897"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProgramArguments.html#a372774d79c4b8a9a941bedf0c0469897">attemptsCount</a> = 5</td></tr>
+<tr class="memdesc:a372774d79c4b8a9a941bedf0c0469897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default number of attempts per 25 number range.  <a href="structProgramArguments.html#a372774d79c4b8a9a941bedf0c0469897">More...</a><br /></td></tr>
 <tr class="separator:a372774d79c4b8a9a941bedf0c0469897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2c1c6e69e94e525a51a3645276e0a1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classssd_1_1NumberRange.html">ssd::NumberRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProgramArguments.html#ad2c1c6e69e94e525a51a3645276e0a1f">range</a> = {1, 10, 25, 30}</td></tr>
+<tr class="memdesc:ad2c1c6e69e94e525a51a3645276e0a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default number range for game.  <a href="structProgramArguments.html#ad2c1c6e69e94e525a51a3645276e0a1f">More...</a><br /></td></tr>
 <tr class="separator:ad2c1c6e69e94e525a51a3645276e0a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Structure to hold and manage program arguments. </p>
+<div class="textblock"><p>Holds all configurable options for the program. </p>
+<p>This structure stores the values of various command-line parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00013">13</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00015">15</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a372774d79c4b8a9a941bedf0c0469897"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a372774d79c4b8a9a941bedf0c0469897">&#9670;&nbsp;</a></span>attemptsCount</h2>
@@ -129,7 +135,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00017">17</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
+<p>Default number of attempts per 25 number range. </p>
+
+<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00019">19</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
 
 </div>
 </div>
@@ -145,23 +153,27 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00014">14</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
+<p>Default host address of the server. </p>
+
+<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00016">16</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a13f162dca126e69cc7865104f03bf194"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13f162dca126e69cc7865104f03bf194">&#9670;&nbsp;</a></span>port</h2>
+<a id="a0bf91cd643d9abcf2b18440f8555838d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf91cd643d9abcf2b18440f8555838d">&#9670;&nbsp;</a></span>port</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">short unsigned ProgramArguments::port = 1024u</td>
+          <td class="memname">unsigned short ProgramArguments::port = 1024u</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00015">15</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
+<p>Default port number for server connection. </p>
+
+<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00017">17</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
 
 </div>
 </div>
@@ -177,7 +189,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00018">18</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
+<p>Default number range for game. </p>
+
+<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00020">20</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
 
 </div>
 </div>
@@ -193,7 +207,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00016">16</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
+<p>Seed for the random number generator, defaults to current time. </p>
+
+<p class="definition">Definition at line <a class="el" href="ProgramArguments_8hpp_source.html#l00018">18</a> of file <a class="el" href="ProgramArguments_8hpp_source.html">ProgramArguments.hpp</a>.</p>
 
 </div>
 </div>

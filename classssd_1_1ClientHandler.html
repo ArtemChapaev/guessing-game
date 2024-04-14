@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('classssd_1_1ClientHandler.html',''); i
 </div><!--header-->
 <div class="contents">
 
-<p>Class responsible for handling client requests and managing communication between server components.  
+<p>Manages communication and game logic for each connected client.  
  <a href="classssd_1_1ClientHandler.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ClientHandler_8hpp_source.html">ClientHandler.hpp</a>&gt;</code></p>
@@ -103,43 +103,43 @@ Collaboration diagram for ssd::ClientHandler:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a03160f7b62eb96a8eddd0aff6008294d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a03160f7b62eb96a8eddd0aff6008294d">ClientHandler</a> (int socket_fd)</td></tr>
-<tr class="memdesc:a03160f7b62eb96a8eddd0aff6008294d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Client Handler object.  <a href="classssd_1_1ClientHandler.html#a03160f7b62eb96a8eddd0aff6008294d">More...</a><br /></td></tr>
-<tr class="separator:a03160f7b62eb96a8eddd0aff6008294d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238a7fce34de181bf99e47a5f143e45b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a238a7fce34de181bf99e47a5f143e45b">ClientHandler</a> (int socket)</td></tr>
+<tr class="memdesc:a238a7fce34de181bf99e47a5f143e45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new Client Handler object.  <a href="classssd_1_1ClientHandler.html#a238a7fce34de181bf99e47a5f143e45b">More...</a><br /></td></tr>
+<tr class="separator:a238a7fce34de181bf99e47a5f143e45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf8006ee3084b67aae85d6c28886b7c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#aaf8006ee3084b67aae85d6c28886b7c6">ClientHandler</a> (const <a class="el" href="classssd_1_1ClientHandler.html">ClientHandler</a> &amp;)=delete</td></tr>
-<tr class="memdesc:aaf8006ee3084b67aae85d6c28886b7c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy constructor to prevent copying of instances.  <a href="classssd_1_1ClientHandler.html#aaf8006ee3084b67aae85d6c28886b7c6">More...</a><br /></td></tr>
 <tr class="separator:aaf8006ee3084b67aae85d6c28886b7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4db9559adbac9fa9245eff480bbdcaa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classssd_1_1ClientHandler.html">ClientHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a4db9559adbac9fa9245eff480bbdcaa0">operator=</a> (const <a class="el" href="classssd_1_1ClientHandler.html">ClientHandler</a> &amp;)=delete</td></tr>
-<tr class="memdesc:a4db9559adbac9fa9245eff480bbdcaa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted assignment operator to prevent copying of instances.  <a href="classssd_1_1ClientHandler.html#a4db9559adbac9fa9245eff480bbdcaa0">More...</a><br /></td></tr>
 <tr class="separator:a4db9559adbac9fa9245eff480bbdcaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1686f2294d8e32040e91e2cc5bb40a50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a1686f2294d8e32040e91e2cc5bb40a50">run</a> (const <a class="el" href="classssd_1_1NumberRange.html">NumberRange</a> &amp;range, int clientID)</td></tr>
-<tr class="memdesc:a1686f2294d8e32040e91e2cc5bb40a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the client handler to process incoming requests.  <a href="classssd_1_1ClientHandler.html#a1686f2294d8e32040e91e2cc5bb40a50">More...</a><br /></td></tr>
-<tr class="separator:a1686f2294d8e32040e91e2cc5bb40a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920890ec6388bd113ac0cb02b45cf715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a920890ec6388bd113ac0cb02b45cf715">run</a> (const <a class="el" href="classssd_1_1NumberRange.html">NumberRange</a> &amp;range, int initialAttemptsCount)</td></tr>
+<tr class="memdesc:a920890ec6388bd113ac0cb02b45cf715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle client requests and game logic.  <a href="classssd_1_1ClientHandler.html#a920890ec6388bd113ac0cb02b45cf715">More...</a><br /></td></tr>
+<tr class="separator:a920890ec6388bd113ac0cb02b45cf715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a6ca6a6d7e8c6810e4a0b3a9cedecc223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a6ca6a6d7e8c6810e4a0b3a9cedecc223">processRequest</a> (const std::unordered_map&lt; std::string, std::string &gt; &amp;requestData, Questions &amp;questions, int &amp;clientID)</td></tr>
-<tr class="memdesc:a6ca6a6d7e8c6810e4a0b3a9cedecc223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a received request, perform necessary actions and respond.  <a href="classssd_1_1ClientHandler.html#a6ca6a6d7e8c6810e4a0b3a9cedecc223">More...</a><br /></td></tr>
-<tr class="separator:a6ca6a6d7e8c6810e4a0b3a9cedecc223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab76ae7ef7b9b3092e69045be6599219d"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#ab76ae7ef7b9b3092e69045be6599219d">createInitialResponse</a> (const <a class="el" href="classssd_1_1GameManager.html">GameManager</a> &amp;gameManager)</td></tr>
-<tr class="memdesc:ab76ae7ef7b9b3092e69045be6599219d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the initial response when a client connects.  <a href="classssd_1_1ClientHandler.html#ab76ae7ef7b9b3092e69045be6599219d">More...</a><br /></td></tr>
-<tr class="separator:ab76ae7ef7b9b3092e69045be6599219d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29d2f65328dc391d5305e6d92f525e13"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a29d2f65328dc391d5305e6d92f525e13">createResponse</a> (const <a class="el" href="classssd_1_1GameManager.html">GameManager</a> &amp;gameManager, Questions questions, bool isNewQuestion)</td></tr>
-<tr class="memdesc:a29d2f65328dc391d5305e6d92f525e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a response based on the game state and whether a new question needs to be generated.  <a href="classssd_1_1ClientHandler.html#a29d2f65328dc391d5305e6d92f525e13">More...</a><br /></td></tr>
-<tr class="separator:a29d2f65328dc391d5305e6d92f525e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160eab6b0bbb5dc08bc052a749a6f112"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a160eab6b0bbb5dc08bc052a749a6f112">processRequest</a> (const std::unordered_map&lt; std::string, std::string &gt; &amp;request, Questions &amp;question, int &amp;questionValue)</td></tr>
+<tr class="memdesc:a160eab6b0bbb5dc08bc052a749a6f112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes a single game request from the client.  <a href="classssd_1_1ClientHandler.html#a160eab6b0bbb5dc08bc052a749a6f112">More...</a><br /></td></tr>
+<tr class="separator:a160eab6b0bbb5dc08bc052a749a6f112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0feadf805731ae96a80cbc8f8e1fb9b6"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a0feadf805731ae96a80cbc8f8e1fb9b6">createInitialResponse</a> (const <a class="el" href="classssd_1_1GameManager.html">GameManager</a> &amp;game)</td></tr>
+<tr class="memdesc:a0feadf805731ae96a80cbc8f8e1fb9b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the initial response to send to the client after the game starts.  <a href="classssd_1_1ClientHandler.html#a0feadf805731ae96a80cbc8f8e1fb9b6">More...</a><br /></td></tr>
+<tr class="separator:a0feadf805731ae96a80cbc8f8e1fb9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fa35f178c5f3540d9c3ea6c101720d"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a52fa35f178c5f3540d9c3ea6c101720d">createResponse</a> (const <a class="el" href="classssd_1_1GameManager.html">GameManager</a> &amp;game, Questions question, bool questionAnswer)</td></tr>
+<tr class="memdesc:a52fa35f178c5f3540d9c3ea6c101720d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a response based on the result of a client's question.  <a href="classssd_1_1ClientHandler.html#a52fa35f178c5f3540d9c3ea6c101720d">More...</a><br /></td></tr>
+<tr class="separator:a52fa35f178c5f3540d9c3ea6c101720d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4a0bc0acc162dd8dbb1f44f3e5d8939f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classssd_1_1ServerNetworkHandler.html">ServerNetworkHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientHandler.html#a4a0bc0acc162dd8dbb1f44f3e5d8939f">networkHandler</a></td></tr>
+<tr class="memdesc:a4a0bc0acc162dd8dbb1f44f3e5d8939f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles network communication with the client.  <a href="classssd_1_1ClientHandler.html#a4a0bc0acc162dd8dbb1f44f3e5d8939f">More...</a><br /></td></tr>
 <tr class="separator:a4a0bc0acc162dd8dbb1f44f3e5d8939f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class responsible for handling client requests and managing communication between server components. </p>
+<div class="textblock"><p>Manages communication and game logic for each connected client. </p>
+<p>This class is responsible for handling all interactions with a connected client. It processes incoming requests, manages game state, and sends responses back to the client. It is designed to be run in a separate thread for each client. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClientHandler_8hpp_source.html#l00021">21</a> of file <a class="el" href="ClientHandler_8hpp_source.html">ClientHandler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClientHandler_8hpp_source.html#l00025">25</a> of file <a class="el" href="ClientHandler_8hpp_source.html">ClientHandler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a03160f7b62eb96a8eddd0aff6008294d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03160f7b62eb96a8eddd0aff6008294d">&#9670;&nbsp;</a></span>ClientHandler() <span class="overload">[1/2]</span></h2>
+<a id="a238a7fce34de181bf99e47a5f143e45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238a7fce34de181bf99e47a5f143e45b">&#9670;&nbsp;</a></span>ClientHandler() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,16 +148,16 @@ Private Attributes</h2></td></tr>
           <td class="memname">ssd::ClientHandler::ClientHandler </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>socket_fd</em></td><td>)</td>
+          <td class="paramname"><em>socket</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new Client Handler object. </p>
+<p>Constructs a new Client Handler object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">socket_fd</td><td>Socket descriptor for the client connection. </td></tr>
+    <tr><td class="paramname">socket</td><td>The socket descriptor associated with the connected client. </td></tr>
   </table>
   </dd>
 </dl>
@@ -190,13 +190,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Deleted copy constructor to prevent copying of instances. </p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab76ae7ef7b9b3092e69045be6599219d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab76ae7ef7b9b3092e69045be6599219d">&#9670;&nbsp;</a></span>createInitialResponse()</h2>
+<a id="a0feadf805731ae96a80cbc8f8e1fb9b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0feadf805731ae96a80cbc8f8e1fb9b6">&#9670;&nbsp;</a></span>createInitialResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +206,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">std::unordered_map&lt; std::string, std::string &gt; ssd::ClientHandler::createInitialResponse </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classssd_1_1GameManager.html">GameManager</a> &amp;&#160;</td>
-          <td class="paramname"><em>gameManager</em></td><td>)</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -219,21 +217,21 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create the initial response when a client connects. </p>
+<p>Creates the initial response to send to the client after the game starts. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">gameManager</td><td>Reference to the <a class="el" href="classssd_1_1GameManager.html" title="Class responsible for managing the state and logic of the game.">GameManager</a> for accessing game state. </td></tr>
+    <tr><td class="paramname">game</td><td>Reference to the <a class="el" href="classssd_1_1GameManager.html" title="Manages the game logic for the number guessing game.">GameManager</a> managing the game logic. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::unordered_map&lt;std::string, std::string&gt; The initial response data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::unordered_map&lt;std::string, std::string&gt; The response containing game start information. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="ClientHandler_8cpp_source.html#l00070">70</a> of file <a class="el" href="ClientHandler_8cpp_source.html">ClientHandler.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a29d2f65328dc391d5305e6d92f525e13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29d2f65328dc391d5305e6d92f525e13">&#9670;&nbsp;</a></span>createResponse()</h2>
+<a id="a52fa35f178c5f3540d9c3ea6c101720d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52fa35f178c5f3540d9c3ea6c101720d">&#9670;&nbsp;</a></span>createResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,19 +243,19 @@ Private Attributes</h2></td></tr>
           <td class="memname">std::unordered_map&lt; std::string, std::string &gt; ssd::ClientHandler::createResponse </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classssd_1_1GameManager.html">GameManager</a> &amp;&#160;</td>
-          <td class="paramname"><em>gameManager</em>, </td>
+          <td class="paramname"><em>game</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Questions&#160;</td>
-          <td class="paramname"><em>questions</em>, </td>
+          <td class="paramname"><em>question</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isNewQuestion</em>&#160;</td>
+          <td class="paramname"><em>questionAnswer</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -272,16 +270,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create a response based on the game state and whether a new question needs to be generated. </p>
+<p>Creates a response based on the result of a client's question. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">gameManager</td><td>Reference to the <a class="el" href="classssd_1_1GameManager.html" title="Class responsible for managing the state and logic of the game.">GameManager</a> for accessing game state. </td></tr>
-    <tr><td class="paramname">questions</td><td>Current set of questions being handled. </td></tr>
-    <tr><td class="paramname">isNewQuestion</td><td>Indicates if a new question should be generated. </td></tr>
+    <tr><td class="paramname">game</td><td>Reference to the <a class="el" href="classssd_1_1GameManager.html" title="Manages the game logic for the number guessing game.">GameManager</a> managing the game logic. </td></tr>
+    <tr><td class="paramname">question</td><td>The type of question asked. </td></tr>
+    <tr><td class="paramname">questionAnswer</td><td>The result of the question (true if correct). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::unordered_map&lt;std::string, std::string&gt; The response data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::unordered_map&lt;std::string, std::string&gt; The response to be sent to the client. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="ClientHandler_8cpp_source.html#l00085">85</a> of file <a class="el" href="ClientHandler_8cpp_source.html">ClientHandler.cpp</a>.</p>
 
@@ -311,12 +309,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Deleted assignment operator to prevent copying of instances. </p>
-
 </div>
 </div>
-<a id="a6ca6a6d7e8c6810e4a0b3a9cedecc223"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ca6a6d7e8c6810e4a0b3a9cedecc223">&#9670;&nbsp;</a></span>processRequest()</h2>
+<a id="a160eab6b0bbb5dc08bc052a749a6f112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160eab6b0bbb5dc08bc052a749a6f112">&#9670;&nbsp;</a></span>processRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,19 +324,19 @@ Private Attributes</h2></td></tr>
           <td class="memname">void ssd::ClientHandler::processRequest </td>
           <td>(</td>
           <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>requestData</em>, </td>
+          <td class="paramname"><em>request</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Questions &amp;&#160;</td>
-          <td class="paramname"><em>questions</em>, </td>
+          <td class="paramname"><em>question</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>clientID</em>&#160;</td>
+          <td class="paramname"><em>questionValue</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -355,12 +351,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Process a received request, perform necessary actions and respond. </p>
+<p>Processes a single game request from the client. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">requestData</td><td>Data received in the request. </td></tr>
-    <tr><td class="paramname">questions</td><td>Questions object for managing related operations. </td></tr>
-    <tr><td class="paramname">clientID</td><td>Reference to client's unique identifier. </td></tr>
+    <tr><td class="paramname">request</td><td>The request received from the client. </td></tr>
+    <tr><td class="paramname">question</td><td>The type of question asked by the client. </td></tr>
+    <tr><td class="paramname">questionValue</td><td>The numerical value associated with the question. </td></tr>
   </table>
   </dd>
 </dl>
@@ -369,8 +365,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1686f2294d8e32040e91e2cc5bb40a50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1686f2294d8e32040e91e2cc5bb40a50">&#9670;&nbsp;</a></span>run()</h2>
+<a id="a920890ec6388bd113ac0cb02b45cf715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a920890ec6388bd113ac0cb02b45cf715">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -385,7 +381,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>clientID</em>&#160;</td>
+          <td class="paramname"><em>initialAttemptsCount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -395,11 +391,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Start the client handler to process incoming requests. </p>
+<p>Main loop to handle client requests and game logic. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">range</td><td>Range of numbers for use in requests. </td></tr>
-    <tr><td class="paramname">clientID</td><td>Unique identifier for the client. </td></tr>
+    <tr><td class="paramname">range</td><td>The range within which the number to be guessed is generated. </td></tr>
+    <tr><td class="paramname">initialAttemptsCount</td><td>Initial number of attempts allowed for the game. </td></tr>
   </table>
   </dd>
 </dl>
@@ -429,7 +425,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ClientHandler_8hpp_source.html#l00049">49</a> of file <a class="el" href="ClientHandler_8hpp_source.html">ClientHandler.hpp</a>.</p>
+<p>Handles network communication with the client. </p>
+
+<p class="definition">Definition at line <a class="el" href="ClientHandler_8hpp_source.html#l00047">47</a> of file <a class="el" href="ClientHandler_8hpp_source.html">ClientHandler.hpp</a>.</p>
 
 </div>
 </div>

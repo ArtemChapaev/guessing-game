@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('classssd_1_1ClientNetworkHandler.html'
 </div><!--header-->
 <div class="contents">
 
-<p>Handles network communications for a client, managing both sending to and receiving data from a server.  
+<p>Handles network communication between the client and server.  
  <a href="classssd_1_1ClientNetworkHandler.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>&gt;</code></p>
@@ -98,23 +98,21 @@ $(document).ready(function(){initNavTree('classssd_1_1ClientNetworkHandler.html'
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4adb40f5fd1ff93840187a3422abb9e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#a4adb40f5fd1ff93840187a3422abb9e8">ClientNetworkHandler</a> (const std::string &amp;<a class="el" href="classssd_1_1ClientNetworkHandler.html#a14c81c05d09c30b530048c54963b1f0f">host</a>, const unsigned short <a class="el" href="classssd_1_1ClientNetworkHandler.html#afdf8dcf26470f261d459f27654b1fdac">port</a>)</td></tr>
-<tr class="memdesc:a4adb40f5fd1ff93840187a3422abb9e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Client Network Handler object.  <a href="classssd_1_1ClientNetworkHandler.html#a4adb40f5fd1ff93840187a3422abb9e8">More...</a><br /></td></tr>
+<tr class="memdesc:a4adb40f5fd1ff93840187a3422abb9e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new Client Network Handler object.  <a href="classssd_1_1ClientNetworkHandler.html#a4adb40f5fd1ff93840187a3422abb9e8">More...</a><br /></td></tr>
 <tr class="separator:a4adb40f5fd1ff93840187a3422abb9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af722a475a3f6252af1d0ee13ce4b6f25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#af722a475a3f6252af1d0ee13ce4b6f25">~ClientNetworkHandler</a> ()</td></tr>
-<tr class="memdesc:af722a475a3f6252af1d0ee13ce4b6f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor that cleans up the socket and other resources.  <a href="classssd_1_1ClientNetworkHandler.html#af722a475a3f6252af1d0ee13ce4b6f25">More...</a><br /></td></tr>
+<tr class="memdesc:af722a475a3f6252af1d0ee13ce4b6f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the Client Network Handler object.  <a href="classssd_1_1ClientNetworkHandler.html#af722a475a3f6252af1d0ee13ce4b6f25">More...</a><br /></td></tr>
 <tr class="separator:af722a475a3f6252af1d0ee13ce4b6f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf2d02ee392ef7eabfeb75b612cd6b8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#aaf2d02ee392ef7eabfeb75b612cd6b8a">ClientNetworkHandler</a> (const <a class="el" href="classssd_1_1ClientNetworkHandler.html">ClientNetworkHandler</a> &amp;)=delete</td></tr>
-<tr class="memdesc:aaf2d02ee392ef7eabfeb75b612cd6b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy constructor to avoid unintentional copy operations.  <a href="classssd_1_1ClientNetworkHandler.html#aaf2d02ee392ef7eabfeb75b612cd6b8a">More...</a><br /></td></tr>
 <tr class="separator:aaf2d02ee392ef7eabfeb75b612cd6b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62334c4c83d6fc5de8738fc69dcf5584"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classssd_1_1ClientNetworkHandler.html">ClientNetworkHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#a62334c4c83d6fc5de8738fc69dcf5584">operator=</a> (const <a class="el" href="classssd_1_1ClientNetworkHandler.html">ClientNetworkHandler</a> &amp;)=delete</td></tr>
-<tr class="memdesc:a62334c4c83d6fc5de8738fc69dcf5584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy assignment operator to avoid unintentional copy operations.  <a href="classssd_1_1ClientNetworkHandler.html#a62334c4c83d6fc5de8738fc69dcf5584">More...</a><br /></td></tr>
-<tr class="separator:a62334c4c83d6fc5de8738fc69dcf5584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b34b9ca9b44c48d70cb954e795aaf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classssd_1_1ClientNetworkHandler.html">ClientNetworkHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#af1b34b9ca9b44c48d70cb954e795aaf9">operator=</a> (const <a class="el" href="classssd_1_1ClientNetworkHandler.html">ClientNetworkHandler</a> &amp;)=delete</td></tr>
+<tr class="separator:af1b34b9ca9b44c48d70cb954e795aaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecec64cc73f0eddef03f88db21efadcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#aecec64cc73f0eddef03f88db21efadcc">connectToServer</a> ()</td></tr>
-<tr class="memdesc:aecec64cc73f0eddef03f88db21efadcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a connection to the server.  <a href="classssd_1_1ClientNetworkHandler.html#aecec64cc73f0eddef03f88db21efadcc">More...</a><br /></td></tr>
+<tr class="memdesc:aecec64cc73f0eddef03f88db21efadcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects to the server using TCP sockets.  <a href="classssd_1_1ClientNetworkHandler.html#aecec64cc73f0eddef03f88db21efadcc">More...</a><br /></td></tr>
 <tr class="separator:aecec64cc73f0eddef03f88db21efadcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4af459f2ac9a0ae0aa853f614d7e34f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#a4af459f2ac9a0ae0aa853f614d7e34f9">sendRequest</a> (const std::unordered_map&lt; std::string, std::string &gt; &amp;request) const</td></tr>
-<tr class="memdesc:a4af459f2ac9a0ae0aa853f614d7e34f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a request to the server.  <a href="classssd_1_1ClientNetworkHandler.html#a4af459f2ac9a0ae0aa853f614d7e34f9">More...</a><br /></td></tr>
-<tr class="separator:a4af459f2ac9a0ae0aa853f614d7e34f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eead92ab9b6869247acdf182426f6d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#a1eead92ab9b6869247acdf182426f6d4">sendRequest</a> (const std::unordered_map&lt; std::string, std::string &gt; &amp;keyValuePairs) const</td></tr>
+<tr class="memdesc:a1eead92ab9b6869247acdf182426f6d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a request to the server.  <a href="classssd_1_1ClientNetworkHandler.html#a1eead92ab9b6869247acdf182426f6d4">More...</a><br /></td></tr>
+<tr class="separator:a1eead92ab9b6869247acdf182426f6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a324cd6fd636278e8074f974fa2d470"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#a6a324cd6fd636278e8074f974fa2d470">receiveResponse</a> ()</td></tr>
 <tr class="memdesc:a6a324cd6fd636278e8074f974fa2d470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives a response from the server.  <a href="classssd_1_1ClientNetworkHandler.html#a6a324cd6fd636278e8074f974fa2d470">More...</a><br /></td></tr>
 <tr class="separator:a6a324cd6fd636278e8074f974fa2d470"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,22 +120,23 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a14c81c05d09c30b530048c54963b1f0f"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#a14c81c05d09c30b530048c54963b1f0f">host</a></td></tr>
-<tr class="memdesc:a14c81c05d09c30b530048c54963b1f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hostname or IP address of the server.  <a href="classssd_1_1ClientNetworkHandler.html#a14c81c05d09c30b530048c54963b1f0f">More...</a><br /></td></tr>
+<tr class="memdesc:a14c81c05d09c30b530048c54963b1f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server host address.  <a href="classssd_1_1ClientNetworkHandler.html#a14c81c05d09c30b530048c54963b1f0f">More...</a><br /></td></tr>
 <tr class="separator:a14c81c05d09c30b530048c54963b1f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdf8dcf26470f261d459f27654b1fdac"><td class="memItemLeft" align="right" valign="top">const unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#afdf8dcf26470f261d459f27654b1fdac">port</a></td></tr>
-<tr class="memdesc:afdf8dcf26470f261d459f27654b1fdac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The port number on which the server is listening.  <a href="classssd_1_1ClientNetworkHandler.html#afdf8dcf26470f261d459f27654b1fdac">More...</a><br /></td></tr>
+<tr class="memdesc:afdf8dcf26470f261d459f27654b1fdac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server port number.  <a href="classssd_1_1ClientNetworkHandler.html#afdf8dcf26470f261d459f27654b1fdac">More...</a><br /></td></tr>
 <tr class="separator:afdf8dcf26470f261d459f27654b1fdac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a407c4c92ea2b100d6b776b0a3423602e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#a407c4c92ea2b100d6b776b0a3423602e">server_socket</a></td></tr>
-<tr class="memdesc:a407c4c92ea2b100d6b776b0a3423602e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket descriptor for the connection to the server.  <a href="classssd_1_1ClientNetworkHandler.html#a407c4c92ea2b100d6b776b0a3423602e">More...</a><br /></td></tr>
+<tr class="memdesc:a407c4c92ea2b100d6b776b0a3423602e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket descriptor for the server connection.  <a href="classssd_1_1ClientNetworkHandler.html#a407c4c92ea2b100d6b776b0a3423602e">More...</a><br /></td></tr>
 <tr class="separator:a407c4c92ea2b100d6b776b0a3423602e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37f8d30b2ae87396edcde7a14b3cd82a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classssd_1_1ClientNetworkHandler.html#a37f8d30b2ae87396edcde7a14b3cd82a">buffer</a></td></tr>
-<tr class="memdesc:a37f8d30b2ae87396edcde7a14b3cd82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for storing data received from the network.  <a href="classssd_1_1ClientNetworkHandler.html#a37f8d30b2ae87396edcde7a14b3cd82a">More...</a><br /></td></tr>
+<tr class="memdesc:a37f8d30b2ae87396edcde7a14b3cd82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for receiving data from the server.  <a href="classssd_1_1ClientNetworkHandler.html#a37f8d30b2ae87396edcde7a14b3cd82a">More...</a><br /></td></tr>
 <tr class="separator:a37f8d30b2ae87396edcde7a14b3cd82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handles network communications for a client, managing both sending to and receiving data from a server. </p>
+<div class="textblock"><p>Handles network communication between the client and server. </p>
+<p>This class manages the network connections and data transmission to the server, including sending requests and receiving responses. It uses TCP sockets for communication. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00019">19</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00022">22</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4adb40f5fd1ff93840187a3422abb9e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4adb40f5fd1ff93840187a3422abb9e8">&#9670;&nbsp;</a></span>ClientNetworkHandler() <span class="overload">[1/2]</span></h2>
@@ -165,11 +164,17 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new Client Network Handler object. </p>
+<p>Constructs a new Client Network Handler object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">host</td><td>The hostname or IP address of the server to connect to. </td></tr>
-    <tr><td class="paramname">port</td><td>The port number on which the server is listening. </td></tr>
+    <tr><td class="paramname">host</td><td>The server hostname. </td></tr>
+    <tr><td class="paramname">port</td><td>The server port. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if the socket cannot be created. </td></tr>
   </table>
   </dd>
 </dl>
@@ -193,7 +198,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destructor that cleans up the socket and other resources. </p>
+<p>Destroys the Client Network Handler object. </p>
+<p>Closes the socket and releases all resources. </p>
 
 <p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8cpp_source.html#l00019">19</a> of file <a class="el" href="ClientNetworkHandler_8cpp_source.html">ClientNetworkHandler.cpp</a>.</p>
 
@@ -223,8 +229,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Deleted copy constructor to avoid unintentional copy operations. </p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -243,14 +247,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Establishes a connection to the server. </p>
+<p>Connects to the server using TCP sockets. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if connection fails. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8cpp_source.html#l00025">25</a> of file <a class="el" href="ClientNetworkHandler_8cpp_source.html">ClientNetworkHandler.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a62334c4c83d6fc5de8738fc69dcf5584"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62334c4c83d6fc5de8738fc69dcf5584">&#9670;&nbsp;</a></span>operator=()</h2>
+<a id="af1b34b9ca9b44c48d70cb954e795aaf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b34b9ca9b44c48d70cb954e795aaf9">&#9670;&nbsp;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +269,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classssd_1_1ClientNetworkHandler.html">ClientNetworkHandler</a> ssd::ClientNetworkHandler::operator= </td>
+          <td class="memname"><a class="el" href="classssd_1_1ClientNetworkHandler.html">ClientNetworkHandler</a>&amp; ssd::ClientNetworkHandler::operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classssd_1_1ClientNetworkHandler.html">ClientNetworkHandler</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -272,8 +282,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Deleted copy assignment operator to avoid unintentional copy operations. </p>
 
 </div>
 </div>
@@ -293,14 +301,20 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Receives a response from the server. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::unordered_map&lt;std::string, std::string&gt; Map containing the response data received. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::unordered_map&lt;std::string, std::string&gt; A map containing the response data. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if there is an error receiving data. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8cpp_source.html#l00055">55</a> of file <a class="el" href="ClientNetworkHandler_8cpp_source.html">ClientNetworkHandler.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a4af459f2ac9a0ae0aa853f614d7e34f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4af459f2ac9a0ae0aa853f614d7e34f9">&#9670;&nbsp;</a></span>sendRequest()</h2>
+<a id="a1eead92ab9b6869247acdf182426f6d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eead92ab9b6869247acdf182426f6d4">&#9670;&nbsp;</a></span>sendRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,7 +323,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">void ssd::ClientNetworkHandler::sendRequest </td>
           <td>(</td>
           <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
+          <td class="paramname"><em>keyValuePairs</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -318,7 +332,13 @@ Private Attributes</h2></td></tr>
 <p>Sends a request to the server. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">request</td><td>Map containing the request data to send. </td></tr>
+    <tr><td class="paramname">keyValuePairs</td><td>A map containing the request parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if the send operation fails. </td></tr>
   </table>
   </dd>
 </dl>
@@ -348,9 +368,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Buffer for storing data received from the network. </p>
+<p>Buffer for receiving data from the server. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00068">68</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00073">73</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
 
 </div>
 </div>
@@ -374,9 +394,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The hostname or IP address of the server. </p>
+<p>Server host address. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00064">64</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00069">69</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
 
 </div>
 </div>
@@ -400,9 +420,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The port number on which the server is listening. </p>
+<p>Server port number. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00065">65</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00070">70</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
 
 </div>
 </div>
@@ -426,9 +446,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Socket descriptor for the connection to the server. </p>
+<p>Socket descriptor for the server connection. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00066">66</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClientNetworkHandler_8hpp_source.html#l00071">71</a> of file <a class="el" href="ClientNetworkHandler_8hpp_source.html">ClientNetworkHandler.hpp</a>.</p>
 
 </div>
 </div>

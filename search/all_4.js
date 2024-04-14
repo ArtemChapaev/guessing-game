@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gamemanager_24',['GameManager',['../classssd_1_1GameManager.html#acc3f73e96f255014afa5a44fc2c8f743',1,'ssd::GameManager::GameManager()'],['../classssd_1_1GameManager.html',1,'ssd::GameManager']]],
+  ['gamemanager_24',['GameManager',['../classssd_1_1GameManager.html#a57680d9fff8c4f5889e3e743f6933953',1,'ssd::GameManager::GameManager()'],['../classssd_1_1GameManager.html',1,'ssd::GameManager']]],
   ['gamemanager_2ecpp_25',['GameManager.cpp',['../GameManager_8cpp.html',1,'']]],
   ['gamemanager_2ehpp_26',['GameManager.hpp',['../GameManager_8hpp.html',1,'']]],
   ['gethighleftborder_27',['getHighLeftBorder',['../classssd_1_1NumberRange.html#a97560cdab477048ac63e06fc63e05a10',1,'ssd::NumberRange']]],

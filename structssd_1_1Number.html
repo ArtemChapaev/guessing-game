@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('structssd_1_1Number.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
-<p>Structure to represent a number within a specific range.  
+<p>Represents a number with its associated range.  
  <a href="structssd_1_1Number.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Number_8hpp_source.html">Number.hpp</a>&gt;</code></p>
@@ -98,25 +98,26 @@ $(document).ready(function(){initNavTree('structssd_1_1Number.html',''); initRes
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7def50bc70d942e69254643ef469e335"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssd_1_1Number.html#a7def50bc70d942e69254643ef469e335">Number</a> (const <a class="el" href="classssd_1_1NumberRange.html">NumberRange</a> &amp;range)</td></tr>
-<tr class="memdesc:a7def50bc70d942e69254643ef469e335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="structssd_1_1Number.html" title="Structure to represent a number within a specific range.">Number</a> object.  <a href="structssd_1_1Number.html#a7def50bc70d942e69254643ef469e335">More...</a><br /></td></tr>
+<tr class="memdesc:a7def50bc70d942e69254643ef469e335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the <a class="el" href="structssd_1_1Number.html" title="Represents a number with its associated range.">Number</a> object.  <a href="structssd_1_1Number.html#a7def50bc70d942e69254643ef469e335">More...</a><br /></td></tr>
 <tr class="separator:a7def50bc70d942e69254643ef469e335"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a9eef5b45b7347d64b235c80360a0b628"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssd_1_1Number.html#a9eef5b45b7347d64b235c80360a0b628">number</a></td></tr>
-<tr class="memdesc:a9eef5b45b7347d64b235c80360a0b628"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value of the number.  <a href="structssd_1_1Number.html#a9eef5b45b7347d64b235c80360a0b628">More...</a><br /></td></tr>
+<tr class="memdesc:a9eef5b45b7347d64b235c80360a0b628"><td class="mdescLeft">&#160;</td><td class="mdescRight">The secret number.  <a href="structssd_1_1Number.html#a9eef5b45b7347d64b235c80360a0b628">More...</a><br /></td></tr>
 <tr class="separator:a9eef5b45b7347d64b235c80360a0b628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd6161ee06ef181e6ac1f82164df3937"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssd_1_1Number.html#acd6161ee06ef181e6ac1f82164df3937">leftBorder</a></td></tr>
-<tr class="memdesc:acd6161ee06ef181e6ac1f82164df3937"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lower boundary of the range.  <a href="structssd_1_1Number.html#acd6161ee06ef181e6ac1f82164df3937">More...</a><br /></td></tr>
+<tr class="memdesc:acd6161ee06ef181e6ac1f82164df3937"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lower bound of the range in which the number is generated.  <a href="structssd_1_1Number.html#acd6161ee06ef181e6ac1f82164df3937">More...</a><br /></td></tr>
 <tr class="separator:acd6161ee06ef181e6ac1f82164df3937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aade0467d09708d65697a08f1f1ef405c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssd_1_1Number.html#aade0467d09708d65697a08f1f1ef405c">rightBorder</a></td></tr>
-<tr class="memdesc:aade0467d09708d65697a08f1f1ef405c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The upper boundary of the range.  <a href="structssd_1_1Number.html#aade0467d09708d65697a08f1f1ef405c">More...</a><br /></td></tr>
+<tr class="memdesc:aade0467d09708d65697a08f1f1ef405c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The upper bound of the range in which the number is generated.  <a href="structssd_1_1Number.html#aade0467d09708d65697a08f1f1ef405c">More...</a><br /></td></tr>
 <tr class="separator:aade0467d09708d65697a08f1f1ef405c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Structure to represent a number within a specific range. </p>
+<div class="textblock"><p>Represents a number with its associated range. </p>
+<p>This struct holds the secret number and its valid range, generated within the limits defined by a <a class="el" href="classssd_1_1NumberRange.html" title="Defines the possible range boundaries for generating numbers.">NumberRange</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="Number_8hpp_source.html#l00013">13</a> of file <a class="el" href="Number_8hpp_source.html">Number.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Number_8hpp_source.html#l00016">16</a> of file <a class="el" href="Number_8hpp_source.html">Number.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7def50bc70d942e69254643ef469e335"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7def50bc70d942e69254643ef469e335">&#9670;&nbsp;</a></span>Number()</h2>
@@ -142,10 +143,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="structssd_1_1Number.html" title="Structure to represent a number within a specific range.">Number</a> object. </p>
+<p>Constructs the <a class="el" href="structssd_1_1Number.html" title="Represents a number with its associated range.">Number</a> object. </p>
+<p>This constructor initializes the <a class="el" href="structssd_1_1Number.html" title="Represents a number with its associated range.">Number</a> with a value within the specified range. It repeatedly generates random left and right borders from the provided <a class="el" href="classssd_1_1NumberRange.html" title="Defines the possible range boundaries for generating numbers.">NumberRange</a> until a valid range is established (leftBorder is less than rightBorder), and then generates the secret number within this range.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">range</td><td>The range within which this number should be generated. </td></tr>
+    <tr><td class="paramname">range</td><td>The range from which to generate the number's borders and value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -167,9 +169,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The lower boundary of the range. </p>
+<p>The lower bound of the range in which the number is generated. </p>
 
-<p class="definition">Definition at line <a class="el" href="Number_8hpp_source.html#l00022">22</a> of file <a class="el" href="Number_8hpp_source.html">Number.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Number_8hpp_source.html#l00029">29</a> of file <a class="el" href="Number_8hpp_source.html">Number.hpp</a>.</p>
 
 </div>
 </div>
@@ -185,9 +187,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The value of the number. </p>
+<p>The secret number. </p>
 
-<p class="definition">Definition at line <a class="el" href="Number_8hpp_source.html#l00021">21</a> of file <a class="el" href="Number_8hpp_source.html">Number.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Number_8hpp_source.html#l00028">28</a> of file <a class="el" href="Number_8hpp_source.html">Number.hpp</a>.</p>
 
 </div>
 </div>
@@ -203,9 +205,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The upper boundary of the range. </p>
+<p>The upper bound of the range in which the number is generated. </p>
 
-<p class="definition">Definition at line <a class="el" href="Number_8hpp_source.html#l00023">23</a> of file <a class="el" href="Number_8hpp_source.html">Number.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Number_8hpp_source.html#l00030">30</a> of file <a class="el" href="Number_8hpp_source.html">Number.hpp</a>.</p>
 
 </div>
 </div>
